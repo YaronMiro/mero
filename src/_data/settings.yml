@@ -1,0 +1,13 @@
+# Category color identifier
+categories:
+  iOS: blue
+  macOS: green
+  Swift: purple
+  Xcode: pink
+  App Design: orange
+
+# Skill level identifier
+skill:
+  beginner: 1
+  intermediate: 2
+  advanced: 3

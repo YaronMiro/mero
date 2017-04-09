@@ -1,0 +1,45 @@
+---
+layout: default
+title: Contact
+type: contact
+---
+
+
+<img class="contact__page__img img--responsive img--radius_-border" src="/images/pages/contact/contact.jpg"  alt="Contact form page illustration image"/>
+<div class="contact__page">
+  <h1 class="contact__page__title__contact">Contact Me</h1>
+
+  <form class="form__contact" action="" method="post" name="contact">
+
+    <div class="form__contact__fields__container">
+      <!-- Name -->
+      <div class="form__contact__field floatl floatl__js">
+        <label class="floatl__label">Name</label>
+        <input class="floatl__input" placeholder="Name" type="text" required="required" />
+      </div>
+      <!-- Email -->
+      <div class="form__contact__field floatl floatl__js">
+        <label class="floatl__label">Email</label>
+        <input class="floatl__input" placeholder="Email" type="email" required="required" />
+      </div>
+      <!-- Subject -->
+      <div class="form__contact__field floatl floatl__js">
+        <label class="floatl__label">Subject</label>
+        <input class="floatl__input" placeholder="Subject" type="text" required="required" />
+      </div>
+      <!-- Message -->
+      <div class="form__contact__field floatl floatl__js">
+        <label class="floatl__label">Message</label>
+        <textarea class="floatl__input textarea" placeholder="Message" type="text" required="required" maxlength="255"></textarea>
+      </div>
+    </div>
+    <!-- Form footer -->
+    <footer class="form__contact__footer">
+      <div class="form__contact__description">
+        <span class="form__contact__description__item">Message can contain up to 255 characters.</span>
+        <span class="form__contact__description__item">All fields are required.</span>
+      </div>
+      <input class="form__contact__submit__button" type="submit" value="Send message">
+    </footer>
+  </form>
+</div>

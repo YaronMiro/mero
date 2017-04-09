@@ -1,1 +1,1 @@
-# mero
+# The mero static website
