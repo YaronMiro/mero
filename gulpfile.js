@@ -108,6 +108,10 @@ gulp.task("html", ["styles"], function () {
 
   return gulp.src("serve/**/*.html")
     .pipe(assets)
+    .pipe($.uglify().on('error', function(e){
+      console.log('#####ERROR######ERROR######ERROR#######ERROR#########ERROR#########');
+      console.log(e);
+      }))
     // Concatenate JavaScript files and preserve important comments
     .pipe($.if("*.js", $.uglify({preserveComments: "some"})))
     // Minify CSS
