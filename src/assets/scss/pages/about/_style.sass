@@ -5,8 +5,10 @@
   flex-direction: row
   justify-content: space-between
 
+
 .about__page__header__info
   margin-left: 1.4rem
+
 
 .logo
   display: block
@@ -21,6 +23,7 @@
     width: inherit
     height: inherit
 
+
 .sub__title
   display: inline-block
   margin: .9rem 0 0 0
@@ -29,10 +32,10 @@
     weight: $weight-thin
   text-transform: uppercase
 
+
 .hero
   display: flex
   flex-direction: column
-  justify-content: flex-end
   margin-top: 0.6rem
   width: 52.9%
   margin-right: 0.7rem
@@ -40,6 +43,7 @@
   img
     max-width: 100%
     height: auto
+
 
 .hero__quote
   margin: 1.5rem 7.2rem 0 0
@@ -51,11 +55,13 @@
   max-width: 19rem
   line-height: 1.8rem
 
+
 .hero__quote__title
   font:
     size: 1.6rem
     weight: $weight-light
   display: block
+
 
 .founders__list
   display: flex
@@ -63,6 +69,7 @@
   margin-top: 3.3rem
   padding-left: 0
   list-style: none
+
 
 .founders__list__item
   display: flex
@@ -72,6 +79,7 @@
 
   &:last-child
     margin-top: 2.2rem
+
 
 .founders__list__item__img
   position: relative
@@ -117,3 +125,114 @@
 
   .info
     margin: 1rem 0 0
+
+
+.divider__angeled
+  margin-top: -.2rem
+  height: .08rem
+  width: 100%
+  background: $soft-border
+
+  &.divider__angeled--one
+    transform: rotateZ(8.5deg)
+
+  &.divider__angeled--two
+    margin-bottom: 7.3vw
+    transform: rotateZ(-8.5deg)
+
+  &.divider__angeled--three
+    margin: 4.4vw 0 3.7vw
+    transform: rotateZ(2deg)
+
+  &.divider__angeled--four
+    margin: 3.9vw 0 4vw
+    transform: rotateZ(-3deg)
+
+
+.info__block
+  padding: 0 2rem
+
+  .title
+    font:
+      family: $anton
+      weight: normal
+    font-size: 4.85rem
+
+  .sub-title
+    font-weight: $weight-light
+
+  .description
+    margin: 0
+    font-size: 1.3rem
+    line-height: 1.95rem
+
+  &.info__block--respect
+    max-width: 77.4rem
+
+    .title
+      margin: -1.3rem 0 0 10.1rem
+
+  &.info__block--core
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    .title
+      margin: 1rem 2rem 0 10rem
+      transform: rotateZ(-9.1deg)
+      text-transform: uppercase
+
+    .sub-title
+      display: block
+
+    .description
+      max-width: 58rem
+
+  &.info__block--quality
+    text-align: center
+
+    .title
+      margin: 0
+      font-size: 3.7rem
+      text-transform: capitalize
+
+      small
+        font-size: 0.7em
+
+    .sub-title
+      margin: 0.6rem 0 0
+      font:
+        size: 1.4rem
+        weight: $weight-light
+
+    .description
+      max-width: 46rem
+      margin: 1.75rem auto 0
+
+
+  &.info__block--design
+    margin-left: 10rem
+
+    .title
+      margin: 0
+      font-size: 4.2rem
+      text-transform: capitalize
+
+      small
+        font-size: 0.7em
+
+    .sub-title
+      margin: -0.6rem 0 0
+      font:
+        size: 1.4rem
+        weight: $weight-light
+
+    .description
+      max-width: 64rem
+      margin: 1.65rem 0 0
+
+
+.respect__infograph
+  height: auto
+  max-width: 100%
+  margin: 4.2rem 0 5.9rem 9.1rem
