@@ -7,8 +7,6 @@
 
 .about__page__header__info
   margin-left: 1.4rem
-  // width: 43%
-  // padding-right: 2rem
 
 .logo
   display: block
@@ -31,7 +29,10 @@
     weight: $weight-thin
   text-transform: uppercase
 
-.hero__img
+.hero
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
   margin-top: 0.6rem
   width: 52.9%
   margin-right: 0.7rem
@@ -39,6 +40,22 @@
   img
     max-width: 100%
     height: auto
+
+.hero__quote
+  margin: 1.5rem 7.2rem 0 0
+
+  /* Align flex child to the left */
+  margin-left: auto
+  text-align: center
+  font-size: 1.3rem
+  max-width: 19rem
+  line-height: 1.8rem
+
+.hero__quote__title
+  font:
+    size: 1.6rem
+    weight: $weight-light
+  display: block
 
 .founders__list
   display: flex
@@ -63,17 +80,40 @@
   &::after
     content: ""
     position: absolute
-    top: .3rem
-    bottom: .3rem
-    left: .3rem
-    right: .3rem
+    top: .4rem
+    bottom: .4rem
+    left: .4rem
+    right: .4rem
     opacity: .8
     border: .15rem solid $white
 
+
 .founders__list__item__info
   margin-left: 1.4rem
+  max-width: 25rem
+  font-size: 1.25rem
+  line-height: 1.5rem
 
   .title
+    margin: 0
     font-size: 1.2rem
     text-transform: uppercase
     font-weight: $weight-light
+
+  .skills__list
+    list-style: none
+    margin-top: .4rem
+    padding: 0
+
+  .skills__list__item
+    margin: .3rem 0 0
+
+    &::before
+      content: "-"
+      padding-right: .4rem
+
+    &:first-child
+      margin-top: 0
+
+  .info
+    margin: 1rem 0 0
