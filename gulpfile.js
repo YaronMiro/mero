@@ -212,4 +212,3 @@ gulp.task("copyFavicon", function() {
 gulp.task("publish", ["build"], function () {
   gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "copyFavicon");
 });
-
