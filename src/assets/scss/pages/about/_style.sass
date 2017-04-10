@@ -1,5 +1,15 @@
 .about__page
 
+.about__page__header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.about__page__header__info
+  margin-left: 1.4rem
+  // width: 43%
+  // padding-right: 2rem
+
 .logo
   display: block
   width: 24.5rem
@@ -15,6 +25,55 @@
 
 .sub__title
   display: inline-block
-  margin-top: .9rem
-  font-size: 2.5rem
+  margin: .9rem 0 0 0
+  font:
+    size: 2.5rem
+    weight: $weight-thin
   text-transform: uppercase
+
+.hero__img
+  margin-top: 0.6rem
+  width: 52.9%
+  margin-right: 0.7rem
+
+  img
+    max-width: 100%
+    height: auto
+
+.founders__list
+  display: flex
+  flex-direction: column
+  margin-top: 3.3rem
+  padding-left: 0
+  list-style: none
+
+.founders__list__item
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 0
+
+  &:last-child
+    margin-top: 2.2rem
+
+.founders__list__item__img
+  position: relative
+  height: 18.3rem
+
+  &::after
+    content: ""
+    position: absolute
+    top: .3rem
+    bottom: .3rem
+    left: .3rem
+    right: .3rem
+    opacity: .8
+    border: .15rem solid $white
+
+.founders__list__item__info
+  margin-left: 1.4rem
+
+  .title
+    font-size: 1.2rem
+    text-transform: uppercase
+    font-weight: $weight-light
