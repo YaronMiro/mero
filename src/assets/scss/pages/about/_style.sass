@@ -129,9 +129,7 @@
 
 .divider__angeled
   margin-top: -.2rem
-  height: .08rem
-  width: 100%
-  background: $soft-border
+  +divider(1px)
 
   &.divider__angeled--one
     transform: rotateZ(8.5deg)
@@ -147,6 +145,10 @@
   &.divider__angeled--four
     margin: 3.9vw 0 4vw
     transform: rotateZ(-3deg)
+
+  &.divider__angeled--five
+    margin: 4vw 0 3.7vw
+    transform: rotateZ(2deg)
 
 
 .info__block
@@ -209,7 +211,6 @@
       max-width: 46rem
       margin: 1.75rem auto 0
 
-
   &.info__block--design
     margin-left: 10rem
 
@@ -230,6 +231,22 @@
     .description
       max-width: 64rem
       margin: 1.65rem 0 0
+
+  &.info__block--clientele
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    .title
+      margin: 0 2rem 0 17.5rem
+      font-size: 3.3rem
+
+    .sub-title
+      display: block
+
+    .description
+      max-width: 35rem
+
 
 
 .respect__infograph
