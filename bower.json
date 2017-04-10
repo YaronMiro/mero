@@ -1,9 +1,14 @@
 {
-  "name": "gm-static",
-  "version": "0.0.0",
-  "dependencies": {},
+  "name": "mero",
+  "description": "Mero website",
+  "main": "",
+  "authors": [
+    "Yaron Miro"
+  ],
+  "license": "MIT",
+  "homepage": "www.mero.design",
   "devDependencies": {
-    "jquery": "^3.1.0",
-    "floatl": "^0.3.0",
+    "jquery": "^3.2.1",
+    "floatl": "^1.0.5"
   }
 }
