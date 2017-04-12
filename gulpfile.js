@@ -67,7 +67,7 @@ gulp.task("styles", function() {
 gulp.task("js", function() {
   gulp.src('src/assets/javascript/*.js')
     .pipe(gulp.dest('serve/assets/javascript'))
-    .pipe(gulp.dest("site/assets/javascript/"));
+    // .pipe(gulp.dest("site/assets/javascript/"));
 });
 
 // Optimizes the images that exists
@@ -139,43 +139,43 @@ gulp.task("cname", function() {
 
 // Optimizes all the CSS, HTML and concats the JS etc
 gulp.task("html", ["styles"], function() {
-  var assets = $.useref.assets({
-    searchPath: "serve"
-  });
+  // var assets = $.useref({searchPath: "serve"});
 
   return gulp.src("serve/**/*.html")
-    .pipe(assets)
+  .pipe($.useref({searchPath: "serve"}))
+  //   .on('error', function(err){
+  //     console.log(err)
+  //   })
     // Concatenate JavaScript files and preserve important comments
-    .pipe($.if("*.js", $.uglify({
-      preserveComments: "some"
-    })))
+    // .pipe($.if("*.js", $.uglify({
+    //   preserveComments: "some"
+    // })))
     // Minify CSS
-    .pipe($.if("*.css", $.minifyCss()))
+    // .pipe($.if("*.css", $.minifyCss()))
     // Start cache busting the files
-    .pipe($.revAll({
-      ignore: [".eot", ".svg", ".ttf", ".woff"]
-    }))
-    .pipe(assets.restore())
+    // .pipe($.revAll({
+    //   ignore: [".eot", ".svg", ".ttf", ".woff"]
+    // }))
     // Conctenate your files based on what you specified in _layout/header.html
-    .pipe($.useref())
+    // .pipe($.useref())
     // Replace the asset names with their cache busted names
-    .pipe($.revReplace())
+    // .pipe($.revReplace())
     // Minify HTML
-    .pipe($.if("*.html", $.htmlmin({
-      removeComments: true,
-      removeCommentsFromCDATA: true,
-      removeCDATASectionsFromCDATA: true,
-      collapseWhitespace: true,
-      collapseBooleanAttributes: true,
-      removeAttributeQuotes: true,
-      removeRedundantAttributes: true,
-      keepClosingSlash: true
-    })))
+    // .pipe($.if("*.html", $.htmlmin({
+    //   removeComments: true,
+    //   removeCommentsFromCDATA: true,
+    //   removeCDATASectionsFromCDATA: true,
+    //   collapseWhitespace: true,
+    //   collapseBooleanAttributes: true,
+    //   removeAttributeQuotes: true,
+    //   removeRedundantAttributes: true,
+    //   keepClosingSlash: true
+    // })))
     // Send the output to the correct folder
     .pipe(gulp.dest("site"))
-    .pipe($.size({
-      title: "optimizations"
-    }));
+    // .pipe($.size({
+    //   title: "optimizations"
+    // }));
 });
 
 
@@ -225,7 +225,7 @@ gulp.task("watch", function() {
   gulp.watch(["serve/assets/stylesheets/*.css"], reload({
     stream: true
   }));
-  gulp.watch(["src/assets/scss/**/*.sass"], ["styles", reload]);
+  gulp.watch(["src/assets/scss/**/*.+(scss|sass)"], ["styles", reload]);
 });
 
 // Serve the site after optimizations to see that everything looks fine
