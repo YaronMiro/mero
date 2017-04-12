@@ -72,15 +72,15 @@ gulp.task("js", function() {
 
 // Optimizes the images that exists
 gulp.task("images", function() {
-  return gulp.src("src/assets/images/**/*")
-    .pipe($.changed("site/assets/images"))
+  return gulp.src("src/images/**/*")
+    .pipe($.changed("site/images"))
     .pipe($.imagemin({
       // Lossless conversion to progressive JPGs
       progressive: true,
       // Interlace GIFs for progressive rendering
       interlaced: true
     }))
-    .pipe(gulp.dest("site/assets/images"))
+    .pipe(gulp.dest("site/images"))
     .pipe($.size({
       title: "images"
     }));
@@ -225,7 +225,7 @@ gulp.task("watch", function() {
   gulp.watch(["serve/assets/stylesheets/*.css"], reload({
     stream: true
   }));
-  gulp.watch(["src/assets/scss/**/*.scss"], ["styles", reload]);
+  gulp.watch(["src/assets/scss/**/*.sass"], ["styles", reload]);
 });
 
 // Serve the site after optimizations to see that everything looks fine
