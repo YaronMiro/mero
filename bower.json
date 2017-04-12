@@ -1,13 +1,7 @@
 {
   "name": "mero",
-  "description": "Mero website",
-  "main": "",
-  "authors": [
-    "Yaron Miro"
-  ],
-  "license": "MIT",
-  "homepage": "www.mero.design",
-  "devDependencies": {
+  "description": "Mero website.",
+  "dependencies": {
     "jquery": "^3.2.1",
     "floatl": "^1.0.5"
   }

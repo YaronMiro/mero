@@ -1,5 +1,32 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
+title: Jekyll-base
+description:
+tagline:
+url: http://localhost:3000
 
-source: 'src'
-destination: 'serve'
+future: true
+
+source: src
+destination: serve
+
+disqus:
+  short_name: ''
+
+# Allow incremental rebuild
+incremental: true
+
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+title :
+excerpt_separator: "<!-- more -->"
+
+paginate: 12
+paginate_path: "blog/page:num"
