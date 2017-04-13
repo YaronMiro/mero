@@ -137,45 +137,46 @@ gulp.task("cname", function() {
 });
 
 
-// Optimizes all the CSS, HTML and concats the JS etc
+// Optimizes all the CSS, HTML and concats the JS et c
 gulp.task("html", ["styles"], function() {
-  // var assets = $.useref({searchPath: "serve"});
+  var cssFilter = $.filter('**/*.css', {restore: true});
+  var jsFilter = $.filter('**/*.js', {restore: true});
+  var htmlFilter = $.filter('**/*.html', {restore: true});
 
   return gulp.src("serve/**/*.html")
-  .pipe($.useref({searchPath: "serve"}))
-  //   .on('error', function(err){
-  //     console.log(err)
-  //   })
-    // Concatenate JavaScript files and preserve important comments
-    // .pipe($.if("*.js", $.uglify({
-    //   preserveComments: "some"
-    // })))
-    // Minify CSS
-    // .pipe($.if("*.css", $.minifyCss()))
+    .pipe($.useref({searchPath: "serve"}))
+    // Minify HTML.
+    .pipe(htmlFilter)
+    .pipe($.htmlmin({
+      removeComments: true,
+      removeCommentsFromCDATA: true,
+      removeCDATASectionsFromCDATA: true,
+      collapseWhitespace: true,
+      collapseBooleanAttributes: true,
+      removeAttributeQuotes: true,
+      removeRedundantAttributes: true,
+      keepClosingSlash: true
+    }))
+    .pipe(htmlFilter.restore())
+    // Minify CSS.
+    .pipe(cssFilter)
+    .pipe($.minifyCss())
+    .pipe(cssFilter.restore())
+    // Concatenate & Minify JavaScript.
+    .pipe(jsFilter)
+    .pipe($.uglify({preserveComments: "some"}))
+    .pipe(jsFilter.restore())
     // Start cache busting the files
-    // .pipe($.revAll({
-    //   ignore: [".eot", ".svg", ".ttf", ".woff"]
-    // }))
-    // Conctenate your files based on what you specified in _layout/header.html
-    // .pipe($.useref())
+    .pipe($.revAll({
+      ignore: [".eot", ".svg", ".ttf", ".woff"]
+    }))
     // Replace the asset names with their cache busted names
-    // .pipe($.revReplace())
-    // Minify HTML
-    // .pipe($.if("*.html", $.htmlmin({
-    //   removeComments: true,
-    //   removeCommentsFromCDATA: true,
-    //   removeCDATASectionsFromCDATA: true,
-    //   collapseWhitespace: true,
-    //   collapseBooleanAttributes: true,
-    //   removeAttributeQuotes: true,
-    //   removeRedundantAttributes: true,
-    //   keepClosingSlash: true
-    // })))
+    .pipe($.revReplace())
     // Send the output to the correct folder
     .pipe(gulp.dest("site"))
-    // .pipe($.size({
-    //   title: "optimizations"
-    // }));
+    .pipe($.size({
+      title: "optimizations"
+    }));
 });
 
 
