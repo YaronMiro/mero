@@ -139,8 +139,11 @@ gulp.task("cname", function() {
 
 // Optimizes all the CSS, HTML and concats the JS et c
 gulp.task("html", ["styles"], function() {
+  // Filter CSS.
   var cssFilter = $.filter('**/*.css', {restore: true});
+  // Filter JavaScript.
   var jsFilter = $.filter('**/*.js', {restore: true});
+  // FIlter HTML.
   var htmlFilter = $.filter('**/*.html', {restore: true});
 
   return gulp.src("serve/**/*.html")
