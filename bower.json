@@ -1,7 +1,9 @@
 {
   "name": "mero",
   "description": "Mero website.",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "animsition": "^4.0.2",
     "jquery": "^3.2.1",
     "floatl": "^1.0.5"
   }

@@ -43,8 +43,8 @@ gulp.task("jekyll:local-prod", $.shell.task("bundle exec jekyll build --config _
 
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function() {
-  // Looks at the style.scss file for what to include and creates a style.css file
-  return gulp.src("src/assets/scss/style.scss")
+  // Looks at the style.sass file for what to include and creates a style.css file
+  return gulp.src("src/assets/scss/style.sass")
     .pipe($.sass())
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", {
@@ -229,7 +229,7 @@ gulp.task("watch", function() {
   gulp.watch(["serve/assets/stylesheets/*.css"], reload({
     stream: true
   }));
-  gulp.watch(["src/assets/scss/**/*.+(scss|sass)"], ["styles", reload]);
+  gulp.watch(["src/assets/scss/**/*.sass"], ["styles", reload]);
 });
 
 // Serve the site after optimizations to see that everything looks fine
