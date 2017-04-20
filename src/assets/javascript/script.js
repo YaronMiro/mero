@@ -49,6 +49,15 @@ function toggleNavigationDisplay() {
   });
 }
 
+
+/**
+ * Init the Scroll Animsition effect (https://github.com/michalsnik/aos).
+ *
+ */
+function inScrollAnimateEffect() {
+  AOS.init();
+}
+
 /**
  * Init the Animsition page load effect (http://git.blivesta.com/animsition/).
  *
@@ -57,7 +66,7 @@ function pageLoadAnimateEffect() {
   $(".animsition").animsition({
     inClass: 'zoom-in-sm',
     outClass: 'zoom-out-sm',
-    inDuration: 650,
+    inDuration: 1000,
     outDuration: 850,
     linkElement: '.animsition-link',
     loading: true,
@@ -80,6 +89,7 @@ function pageLoadAnimateEffect() {
 
 $(document).ready(function() {
   pageLoadAnimateEffect();
+  inScrollAnimateEffect();
   testBrowser();
   toggleNavigationDisplay();
   initFloatLabel('floatl__js');
