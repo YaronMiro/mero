@@ -79,24 +79,35 @@
   padding: 0
 
   &:last-child
-    margin-top: 1.3rem
+    margin-top: 3.3rem
 
 
 .founders__list__item__img
-  height: 16.5rem
-  width: auto
-  border-radius: 0.2rem
+  position: relative
+  height: 18.3rem
+
+  &::after
+    content: ""
+    position: absolute
+    top: .4rem
+    bottom: .4rem
+    left: .4rem
+    right: .4rem
+    opacity: .8
+    border: .15rem solid $white
 
 
 .founders__list__item__info
   margin-left: 1.4rem
   max-width: 25rem
-  font-size: 1.25rem
+  font:
+    size: 1.25rem
+    weight: $weight-light
   line-height: 1.5rem
 
   .title
     margin: 0 0 1.2rem
-    font-size: 1.8rem
+    font-size: 1.9rem
     text-transform: uppercase
     font-weight: $weight-light
     color: #9a8e76
@@ -108,16 +119,19 @@
 
   .skills__list__item
     margin: .3rem 0 0
+    padding: .4rem 0
+    border-bottom: 1px solid $soft-border
 
     &::before
-      content: "-"
-      padding-right: .4rem
+      // content: "-"
+      // padding-right: .4rem
 
     &:first-child
       margin-top: 0
 
   .info
-    margin: 1rem 0 0
+    margin: 1.5rem 0 0
+    line-height: 1.8rem
 
 
 .divider__angeled
@@ -158,8 +172,11 @@
 
   .description
     margin: 0
-    font-size: 1.3rem
-    line-height: 1.95rem
+    font:
+      size: 1.35rem
+      weight: $weight-light
+    line-height: 2rem
+
 
   &.info__block--respect
     max-width: 77.4rem
