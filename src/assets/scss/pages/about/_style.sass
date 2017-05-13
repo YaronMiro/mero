@@ -1,7 +1,7 @@
 .content
   display: flex
   flex-direction: column
-  margin-top: 100px
+  margin-top: 4.4rem
 
   +respond-at($breakpoint-L)
     flex-direction: row-reverse
@@ -22,7 +22,7 @@
 
 .team__list
   list-style: none
-  margin: 100px 0 0
+  margin: 9rem 0 0
   padding: 0
   display: flex
   flex-direction: column
@@ -36,8 +36,7 @@
   position: relative
   display: flex
   flex-direction: column
-  margin-top: 30px
-  max-width: 340px
+  max-width: 25rem
 
   +respond-at($breakpoint-M)
     flex-direction: row
@@ -66,7 +65,7 @@
       border-left: 2px solid $gold
 
   &+.team__list__item
-    margin-top: 150px
+    margin-top: 3rem
 
     +respond-at($breakpoint-L)
       margin-top: 30px
@@ -74,12 +73,8 @@
 
 .team__list__item__header
   position: relative
-  height: 229px
+  height: 14rem
   background: #3e3e3e
-
-  +respond-at($breakpoint-S)
-    width: 340px
-    // height: 228px
 
   +respond-at($breakpoint-M)
     flex-shrink: 0
@@ -94,14 +89,14 @@
 .team__list__item__img__container
   overflow: hidden
   position: absolute
-  top: 33px
-  right: 26px
-  width: 174px
-  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.23)
-  border-radius: 3px
+  top: 1.5rem
+  right: 2rem
+  width: 11rem
+  box-shadow: 0px 0.25rem 0.9rem 0px rgba(0, 0, 0, 0.23)
+  border-radius: .25rem
 
   +respond-at(420px)
-    width: 194px
+    width: 12.5rem
 
   +respond-at($breakpoint-M)
     width: 220px
@@ -120,7 +115,8 @@
 
 
 .team__list__item__info
-  margin-top: 75px
+  margin-top: 6.2rem
+  font-size: 1.3rem
 
   +respond-at($breakpoint-M)
     margin-left: 50px
@@ -132,6 +128,10 @@
 
 .team__list__item__title
   text-transform: uppercase
+  text-transform: uppercase
+  margin: .8rem 0 .58rem
+  font-size: 1.6rem
+  font-weight: $weight-regular
 
   +respond-at($breakpoint-L)
     margin-to: 0
@@ -140,24 +140,80 @@
 .team__list__item__attributes
   +reset-list-style()
 
-  .attributes__list__item
+  .attributes__item
 
-    &+.attributes__list__item
-      margin-top: 9px
+    &+.attributes__item
+      margin-top: .4rem
+
+.team__list__item__description
 
 
 .divider
-  +divider(1px, $mist)
+  +divider(1px, $gray-lighter)
 
   &.divider--angeled-one
-    transform: rotate(-3deg)
+    transform: rotate(-6deg)
 
   &.divider--angeled-two
-    transform: rotate(3deg)
+    transform: rotate(6deg)
 
 
 .info__block
+  padding: 2.5rem 0 5rem
   text-align: center
+
+  .title
+    margin: 0
+    font:
+      family: $anton
+      weight: normal
+    font-size: 4.85rem
+
+  .sub-title
+    margin: 0 1.5rem 0
+    color: $gold
+    font:
+      size: 1.5rem
+      weight: $weight-regular
+    line-height: 1.8rem
+
+  .description
+    margin: 1rem 0 0
+    font-size: 1.4rem
+    line-height: 2rem
+
+
+  &.info__block--respect
+    margin-bottom: 12.5rem
+    padding-bottom: 0
+
+    .title
+      margin: 2.5rem 0 4.7rem
+
+  &.info__block--core
+    .title
+      text-transform: uppercase
+
+    .sub-title
+      margin-top: -.5rem
+
+  &.info__block--design
+    .title
+      font-size: 4.2rem
+
+  &.info__block--quality
+    .title
+      font-size: 3.75rem
+      small
+        font-size: 2.45rem
+
+  &.info__block--clientele
+    .title
+      display: inline-block
+      padding: .5rem 1rem
+      font-size: 3.2rem
+      border: .14rem solid $gold
+
 
 .respect__infograph
   display: none
@@ -167,8 +223,8 @@
 
 .respect__list
   +reset-list-style()
-  max-width: 400px
-  margin: 0 auto 150px
+  max-width: 28.5rem
+  margin: 0 auto 5.6rem
 
 
   +respond-at($breakpoint-M)
@@ -177,6 +233,8 @@
   .respect__list__item
     position: relative
     padding-bottom: 20px
+    font-size: 1.5rem
+    line-height: 1.4rem
 
     &::after
       position: absolute
@@ -191,10 +249,9 @@
       z-index: 3
       position: absolute
       content: ""
-      bottom: -6px
-      right: 0
-      height: 14px
-      width: 14px
+      bottom: -.4rem
+      height: 1.5rem
+      width: 1.5rem
       background: white
       border: 1px solid gray
 
@@ -209,28 +266,14 @@
         transform: rotate(-2deg)
 
     &:nth-child(even)
-      margin-left: 25px
-      padding-left: 25px
+      margin-left: 3rem
+      padding-left: 2.1rem
 
       &::before
-        left: 15px
+        left: 2.1rem
 
       &::after
         transform: rotate(2deg)
 
     &+.respect__list__item
-      margin-top: 25px
-
-
-.info__block
-  padding: 45px 0
-
-  .title
-    margin-top: 0
-    font:
-      family: $anton
-      weight: normal
-    font-size: 4.85rem
-
-  .description
-    margin-bottom: 0
+      margin-top: 4.5rem
