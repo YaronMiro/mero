@@ -10,10 +10,11 @@
       font-size: 4.85rem
 
   .form__contact__fields__container
-    font-size: 2.25rem
+    font:
+      size: 2.5rem
 
     .form__contact__field
-      min-height: 4rem
+      min-height: 4.5rem
       border-bottom: 1px solid $gray-lighter
 
     .floatl__input.textarea
@@ -22,7 +23,7 @@
 
     /* Custom style to overwrite the default float-label style. */
     .floatl--focused
-      background-color: lighten($gold, 56%)
+      background-color: lighten($black, 99%)
 
     .floatl--error
       background-color: lighten($error, 45%)
@@ -30,9 +31,19 @@
       .floatl__label
         color: $error
 
-    input.floatl__input
+    input.floatl__input,
+    textarea.floatl__input
+      color: inherit
       height: auto
       background-color: transparent
+      letter-spacing: inherit
+      font:
+        size: 1.25rem
+        family: inherit
+
+    input.floatl__input
+
+
 
     .floatl__label,
     .floatl__input,
@@ -41,8 +52,12 @@
       background-color: transparent
 
     .floatl__label
-      margin-top: .3em
-      font-size: .4em
+      margin: 0 0 .7rem
+      padding: .4rem .3rem .3rem
+      font:
+        size: .4em
+        weight: $weight-light
+
 
     .floatl--focused .floatl__label,
     .floatl__label
@@ -60,6 +75,8 @@
 
   .form__contact__footer
     margin-top: .4em
+    padding-right: 1.1rem
+    padding-left: 1.1rem
 
     +respond-at($breakpoint-S)
       display: flex
@@ -68,38 +85,55 @@
       align-items: center
 
   .form__contact__description
-    font-size: .85em
-
+    font:
+      family: $aileron, Arial, sans-serif
+      size: 1.2rem
+      weight: $weight-thin
+    color: lighten($black, 55%)
 
   .form__contact__description__item
+    margin-top: .5rem
     position: relative
     display: block
-    padding-left: .7em
+    padding-left: 1.5em
     line-height: 1.5em
 
     &::before
       position: absolute
       content: "*"
-      top: .35em
+      top: -.15rem
       left: 0
       color: $gold
-      font-size: 1.2em
+      font-size: 2em
 
-    &:first-child
-      margin-bottom: .32em
 
 
   .form__contact__submit__button
     +reset-button-style()
-    display: block
-    margin-top: 1em
-    padding: 0 .5em .25em
+    display: inline-block
+    margin-top: 1rem
+    padding: 0 .5em 0
+    width: 100%
+    border-radius: .2rem
+    height: 2.9rem
     color: $white
     background-color: $black
-    width: 100%
-    text-align: center
-    font-size: .9em
+    letter-spacing: .04rem
+    font:
+      size: 1.4rem
+      weight: $weight-light
+
+    +respond-at(420px)
+      margin-left: calc(50% - 7.5rem)
+      width: 15rem
 
     +respond-at($breakpoint-S)
-      width: auto
-      display: inline-block
+      margin-top: 0
+      margin-left: 0
+      background-color: transparent
+      background:
+        image: url('/images/button-bg.svg')
+        repeat: no-repeat
+        size: contain
+        position: center
+      width: 5rem
