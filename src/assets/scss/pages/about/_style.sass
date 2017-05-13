@@ -159,11 +159,20 @@
 
 
 .info__block
-  padding: 2.5rem 0 5rem
+  padding: 3.5rem 0
   text-align: center
 
+  +respond-at(420px)
+    padding-right: 1.5rem
+    padding-left: 1.5rem
+
+  +respond-at($breakpoint-S)
+    padding-right: 2.5rem
+    padding-left: 2.5rem
+
+
   .title
-    margin: 0
+    margin: 0 0 .5rem
     font:
       family: $anton
       weight: normal
@@ -204,15 +213,23 @@
   &.info__block--quality
     .title
       font-size: 3.75rem
+
       small
+        display: block
         font-size: 2.45rem
+
+        +respond-at(580px)
+          display: inline-block
 
   &.info__block--clientele
     .title
       display: inline-block
       padding: .5rem 1rem
-      font-size: 3.2rem
+      font-size: 2.55rem
       border: .14rem solid $gold
+
+      +respond-at(380px)
+        font-size: 3.2rem
 
 
 .respect__infograph
@@ -256,7 +273,6 @@
       border: 1px solid gray
 
     &:nth-child(odd)
-      margin-right: 25px
       padding-right: 25px
 
       &::before
@@ -266,7 +282,6 @@
         transform: rotate(-2deg)
 
     &:nth-child(even)
-      margin-left: 3rem
       padding-left: 2.1rem
 
       &::before
