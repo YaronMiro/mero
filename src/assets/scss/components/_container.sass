@@ -1,9 +1,17 @@
 .container__main
-  padding: 2.8rem 0
-  // border-left: 1px solid red
-  // border-right:  1px solid red
-
-.container__main__content
-  // max-width: 1200px
+  position: relative
   margin: 0 auto
-  padding: 0 10rem
+  padding: 50px 7%
+  
+  +respond-at($breakpoint-S)
+    padding-left: 0
+    padding-right: 0
+    max-width: $container-S
+
+  +respond-at($breakpoint-M)
+    max-width: $container-M
+
+  +respond-at($breakpoint-L)
+    padding-left: 25px
+    padding-right: 25px
+    max-width: $container-L

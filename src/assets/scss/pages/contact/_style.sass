@@ -1,150 +1,111 @@
-.contact__page
-  +page-container()
+.contact__us
+  .contact__us__title
+    text-align: center
 
+  .form__contact__fields__container
+    font-size: 2.25rem
 
-.contact__page__img
-  margin-bottom: 3em
+    .form__contact__field
+      min-height: 4rem
+      border-bottom: 1px solid rgba($mist, 0.6)
 
+    .floatl__input.textarea
+      min-height: 10em
+      max-width: 100% !important
 
-.contact__page__title__contact
-  margin: 0 0 1em
-  font-size: 1.2em
-  font-weight: $weight-thin
-  color: $grey-medium
+    /* Custom style to overwrite the default float-label style. */
+    .floatl--focused
+      background-color: lighten($gold, 56%)
 
+    .floatl--error
+      background-color: lighten($red-medium, 45%)
 
-.form__contact__fields__container
-  margin-right: -1rem
-  margin-left: -1rem
-  position: relative
-  padding-top: .2em
-  border: 1px solid rgba($mist, 0.6)
-  border-radius: .2em
-  font-size: 2.25rem
-  overflow: hidden
+      .floatl__label
+        color: $red-medium
 
-  &::before
-    content: ""
-    position: absolute
-    z-index: 2
-    top: 0
-    left: 0
-    right: 0
-    height: .2em
-    border-bottom: 1px solid rgba($mist, 0.6)
-    border-radius: .2em .2em 0 0
-    background: $soft
+    input.floatl__input
+      height: auto
+      background-color: transparent
 
-  .form__contact__field
-    min-height: 4rem
-    border-bottom: 1px solid rgba($mist, 0.6)
-
-    &:last-child
-      border-bottom: 0
-
-  .floatl__input.textarea
-    min-height: 10em
-    max-width: 100% !important
-
-  /* Custom style to overwrite the default float-label style. */
-  .floatl--focused
-    background-color: lighten($green, 56%)
-
-  .floatl--error
-    background-color: lighten(red, 45%)
+    .floatl__label,
+    .floatl__input,
+    .floatl--active.floatl--multiline .floatl__label
+      background: transparent
+      background-color: transparent
 
     .floatl__label
-      color: $red-medium
+      margin-top: .3em
+      font-size: .4em
 
-  input.floatl__input
-    height: auto
-    background-color: transparent
+    .floatl--focused .floatl__label,
+    .floatl__label
+      color: $gold
 
-  .floatl__label,
-  .floatl__input,
-  .floatl--active.floatl--multiline .floatl__label
-    background: transparent
-    background-color: transparent
-
-  .floatl__label
-    margin-top: .3em
-    font-size: .4em
-    font-weight: $weight-regular
+    .floatl__input,
+    .textarea
+      color: $grey-medium
 
 
-  .floatl--focused .floatl__label,
-  .floatl__label
-    color: $green
+    .floatl--active .floatl__input
+      padding: 1.5em .55em .3em
 
-  .floatl__input,
-  .textarea
-    color: $grey-medium
+    .floatl__input
+      padding: 1.1em 1em .3em
+      width: 100%
+      border: 0
+      border-radius: 0
+      font-size: .45em
 
+  .form__contact__footer
+    margin-top: .4em
 
-  .floatl--active .floatl__input
-    padding: 1.5em .55em .3em
+    +respond-at($breakpoint-S)
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
 
-  .floatl__input
-    padding: 1.1em 1em .3em
-    width: 100%
-    border: 0
-    border-radius: 0
-    font-size: .45em
-
-.form__contact__footer
-  +clearfix()
-  margin-top: .4em
-
-
-.form__contact__description
-  float: left
-  color: lighten($grey-medium, 20%)
-  font-size: .85em
-
-  +respond-at(460px)
-    display: inline-block
-    float: left
-    width: 50%
+  .form__contact__description
+    color: lighten($grey-medium, 20%)
+    font-size: .85em
 
 
-.form__contact__description__item
-  position: relative
-  display: inline-block
-  padding-left: .7em
-  line-height: 1.5em
+  .form__contact__description__item
+    position: relative
+    display: block
+    padding-left: .7em
+    line-height: 1.5em
 
-  &::before
-    position: absolute
-    content: "*"
-    top: .35em
-    left: 0
-    color: $red-medium
-    font-size: 1.2em
+    &::before
+      position: absolute
+      content: "*"
+      top: .35em
+      left: 0
+      color: $gold
+      font-size: 1.2em
 
-  &:first-child
-    margin-bottom: .32em
+    &:first-child
+      margin-bottom: .32em
 
 
-.form__contact__submit__button
-  +reset-button-style()
-  display: inline-block
-  margin-top: 1em
-  padding: 0 .5em .25em
-  color: $grey-medium
-  background-color: $soft
-  width: 100%
-  border: 1px solid $mist
-  border-radius: .185em
-  text-align: center
-  font-size: .9em
-  @extend .link-arrow
-
-  &:hover
+  .form__contact__submit__button
+    +reset-button-style()
+    display: block
+    margin-top: 1em
+    padding: 0 .5em .25em
     color: $white
-    background-color: $grey-medium
-    border: 1px solid $grey-medium
+    background-color: gray
+    width: 100%
+    border: 1px solid $mist
+    border-radius: .185em
+    text-align: center
+    font-size: .9em
 
-  +respond-at(460px)
-    float: right
-    margin-top: .6em
-    width: auto
+    &:hover
+      color: $white
+      background-color: $grey-medium
+      border: 1px solid $grey-medium
+
+    +respond-at($breakpoint-S)
+      width: auto
+      display: inline-block
