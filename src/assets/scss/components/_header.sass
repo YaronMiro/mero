@@ -11,7 +11,7 @@
 
 
 .main__header__menu
-  padding-bottom: 20px
+  padding-bottom: 1.2rem
   border-bottom: 1px solid gray
 
   .main__header__menu__list
@@ -25,33 +25,37 @@
     border-bottom: 0
 
   .menu__item__link
-    color: $menu-text-color
+    color: inherit
     text-decoration: none
+    text-transform: uppercase
+    font:
+      size: 1.15rem
+      weight: $weight-regular
 
 
 .main__header__menu__button
-  color: darkgray
-  background: transparent
-  outline: 0
-  border: 0
-  font-size: 2rem
+  +reset-button-style()
+  margin: 0 auto
+  display: flex
+  flex-direction: row
+  align-items: center
 
   +respond-at($breakpoint-M)
     display: none
 
   .button__icon
-    position: relative
-    padding-right: 5em
+    display:block
+    margin-right: 0.4rem
+    width: 2.4rem
+    height: 2.4rem
+    background: $black-medium
 
-    &::before
-      position: absolute
-      content: ""
-      left: 0
-      top: 0.25em
-      width: 1em
-      height: 0.15em
-      background: $menu-text-color
-      box-shadow: 0 0.25em 0 0 $menu-text-color, 0 0.5em 0 0 $menu-text-color
+  .button__text
+    display: block
+    font:
+      size: 2.5rem
+      weight: $weight-thin
+    text-transform: uppercase
 
 
 .main__header__menu__list
