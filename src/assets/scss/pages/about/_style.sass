@@ -1,7 +1,7 @@
 .content
   display: flex
   flex-direction: column
-  margin-top: 4.4rem
+  margin-top: 0
 
   +respond-at($breakpoint-L)
     flex-direction: row-reverse
@@ -13,7 +13,7 @@
   text-align: center
 
   +respond-at($breakpoint-L)
-    width: 781px
+    width: 50rem
 
   .collage__img
     max-width: 100%
@@ -46,23 +46,23 @@
 
   +respond-at($breakpoint-L)
     margin-bottom: 0
-    &::before
-      position: absolute
-      content: ""
-      top: 44px
-      left: 186px
-      height: 160px
-      width: 20px
-      border-top: 2px solid $gold
-      border-bottom: 2px solid $gold
-
-    &::after
-      position: absolute
-      content: ""
-      top: 6px
-      left: 205px
-      height: 240px
-      border-left: 2px solid $gold
+    // &::before
+    //   position: absolute
+    //   content: ""
+    //   top: 44px
+    //   left: 186px
+    //   height: 160px
+    //   width: 20px
+    //   border-top: 2px solid $gold
+    //   border-bottom: 2px solid $gold
+    //
+    // &::after
+    //   position: absolute
+    //   content: ""
+    //   top: 6px
+    //   left: 205px
+    //   height: 240px
+    //   border-left: 2px solid $gold
 
   &+.team__list__item
     margin-top: 3rem
@@ -119,12 +119,11 @@
   font-size: 1.3rem
 
   +respond-at($breakpoint-M)
-    margin-left: 50px
-    max-width: 350px
+    margin-left: 1.5rem
+    max-width: 25rem
 
   +respond-at($breakpoint-L)
     margin-top: 0
-    max-width: 350px
 
 .team__list__item__title
   text-transform: uppercase
@@ -194,10 +193,12 @@
 
   &.info__block--respect
     margin-bottom: 12.5rem
+    padding-top: 0
     padding-bottom: 0
 
     .title
-      margin: 2.5rem 0 4.7rem
+      margin: 0 0 4.7rem
+      text-align: left
 
   &.info__block--core
     .title
@@ -237,6 +238,8 @@
 
   +respond-at($breakpoint-M)
     display: block
+    width: 61.35rem
+    height: auto
 
 .respect__list
   +reset-list-style()
