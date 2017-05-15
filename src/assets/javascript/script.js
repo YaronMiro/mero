@@ -43,10 +43,8 @@ function initFloatLabel(className) {
  *
  */
 function toggleNavigationDisplay() {
-
-  $('#main-header-menu .main__header__menu__button').click(function() {
-    alert('no');
-    // $('aside').toggleClass('open');
+  $('.main__header__menu__button').click(function() {
+    $('#main-header-nav-container').toggleClass('open__mobile__navigation');
   });
 }
 

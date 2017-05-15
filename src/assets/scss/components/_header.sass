@@ -1,5 +1,4 @@
 .main__header
-  z-index: 1000
   text-align: center
 
   +respond-at($breakpoint-L)
@@ -9,25 +8,14 @@
     align-items: center
     border-bottom: 0
 
-
 .main__header__menu
   padding-bottom: 0.9rem
   border-bottom: .1rem solid $black
-
-  .main__header__menu__list
-    font:
-      size: 1.27rem
-      weight: $weight-light
 
   +respond-at($breakpoint-L)
     padding-bottom: 0
     width: 50%
     border-bottom: 0
-
-  .menu__item__link
-    color: inherit
-    text-decoration: none
-    text-transform: uppercase
 
 
 .main__header__menu__button
@@ -54,19 +42,24 @@
 
 
 .main__header__menu__list
-  display: none
   +reset-list-style()
+  font:
+    size: 1.27rem
+    weight: $weight-light
 
   +respond-at($breakpoint-M)
     display: block
 
-
   .menu__list__item
     display: inline-block
+    text-transform: uppercase
 
     &+.menu__list__item
       margin-left: 1.85rem
 
+    .menu__item__link
+      color: inherit
+      text-decoration: none
 
 .logo
   display: block
