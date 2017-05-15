@@ -39,13 +39,14 @@ function initFloatLabel(className) {
 }
 
 /**
- * Init the float label JS code (https://github.com/richardvenneman/floatl).
+ * Init the mobile navigation menu button.
  *
  */
 function toggleNavigationDisplay() {
-  $('#toggle-navigation-display').click(function(){
-    $(this).toggleClass('nav__button__icon--hide');
-    $('#main__header').find('.navigation').toggleClass('navigation--overlay');
+
+  $('#main-header-menu .main__header__menu__button').click(function() {
+    alert('no');
+    // $('aside').toggleClass('open');
   });
 }
 
