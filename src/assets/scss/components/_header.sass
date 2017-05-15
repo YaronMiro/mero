@@ -14,6 +14,7 @@
 
   +respond-at($breakpoint-L)
     padding-bottom: 0
+    padding-right: 2rem
     width: 50%
     border-bottom: 0
 
@@ -41,26 +42,146 @@
     text-transform: uppercase
 
 
+#main-header-nav-container
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: $white
+  opacity: 0
+  visibility: hidden
+  transition: all .5s ease
+  z-index: 1000
+
+  &.open__mobile__navigation
+    opacity: 1
+    visibility: visible
+
+  +respond-at($breakpoint-M)
+    position: relative
+    width: auto
+    height: auto
+    top: 0
+    left: 0
+    background: transparent
+    opacity: 1
+    visibility: visible
+    transition: all .5s ease
+    z-index: 1
+
+  .main__header__nav
+    text-align: center
+    height: 70vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    +respond-at($breakpoint-M)
+      height: auto
+      display: block
+
+
+.outer-close
+  position: absolute
+  right: 0
+  top: 0
+  width: 5rem
+  height: 5rem
+  cursor: pointer
+
+  .close
+    position: fixed
+    top: 2.5rem
+    right: 3.8rem
+    color: white
+    z-index: 3
+    cursor: pointer
+    font-family: sans-serif
+
+    span,
+    span:before,
+    span:after
+      border-radius: .3rem
+      height: .4rem
+      width: 2.2rem
+      background: $black
+      position: absolute
+      display: block
+      content: ""
+
+    span
+      background: transparent
+
+      &::before
+        transform: rotate(45deg)
+
+      &::after
+        transform: rotate(-45deg)
+
+
 .main__header__menu__list
   +reset-list-style()
   font:
-    size: 1.27rem
+    size: 2rem
     weight: $weight-light
+  line-height: 10vh
+
 
   +respond-at($breakpoint-M)
     display: block
+    font:
+      size: 1.27rem
+      weight: $weight-regular
+    line-height: 2.5rem
 
   .menu__list__item
-    display: inline-block
+    display: block
     text-transform: uppercase
 
+    +respond-at($breakpoint-M)
+      display: inline-block
+
     &+.menu__list__item
-      margin-left: 1.85rem
+      +respond-at($breakpoint-M)
+        margin-left: 1.85rem
 
     .menu__item__link
+      display: block
       color: inherit
       text-decoration: none
+      transition: transform 0.5s ease
+      cursor: pointer
 
+      &:hover
+        &:before
+          visibility: visible
+          transform: scaleX(1)
+
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: .04rem
+        bottom: 0
+        left: 0
+        background: $gold
+        visibility: hidden
+        transform: scaleX(0)
+        transition: all 0.3s ease-in-out 0s
+
+      +respond-at($breakpoint-M)
+        opacity: .8
+        &:hover
+          color: $gold
+          opacity: 1
+          transform: scale(1.0)
+        &:before
+          display: none
+
+      +respond-at($breakpoint-L)
+        &:before
+          display: block
 .logo
   display: block
   margin: 3.5rem auto 0
