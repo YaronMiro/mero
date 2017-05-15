@@ -12,11 +12,14 @@
   padding-bottom: 0.9rem
   border-bottom: .1rem solid $black
 
+  +respond-at($breakpoint-M)
+    border-bottom: 0
+
   +respond-at($breakpoint-L)
     padding-bottom: 0
     padding-right: 2rem
     width: 50%
-    border-bottom: 0
+
 
 
 .main__header__menu__button
@@ -67,7 +70,7 @@
     background: transparent
     opacity: 1
     visibility: visible
-    transition: all .5s ease
+    transition: none
     z-index: 1
 
   .main__header__nav
@@ -173,21 +176,22 @@
       +respond-at($breakpoint-M)
         opacity: .8
         &:hover
-          color: $gold
           opacity: 1
           transform: scale(1.0)
-        &:before
-          display: none
 
       +respond-at($breakpoint-L)
         &:before
           display: block
+
 .logo
   display: block
   margin: 3.5rem auto 0
 
   +respond-at($breakpoint-S)
     max-width: 83%
+
+  +respond-at($breakpoint-S)
+    margin-top: 5rem
 
   +respond-at($breakpoint-L)
     max-width: auto
