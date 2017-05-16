@@ -78,9 +78,11 @@
     flex-direction: column
     justify-content: center
     margin: 0 auto
-    max-width: 60vw
     height: 95vh
     text-align: left
+
+    +respond-at(420px)
+      max-width: 60vw
 
     +respond-at($breakpoint-S)
       text-align: center
@@ -161,13 +163,16 @@
         margin-left: 1.85rem
 
     &.menu__list__item--active
-      border-bottom: .15rem solid $gold
+      color: $gold
+      +respond-at($breakpoint-M)
+        color: $black
+        border-bottom: .15rem solid $gold
 
       .menu__item__link
-
         &:hover
           +respond-at($breakpoint-M)
             opacity: .8
+
         &:before
           visibility: hidden
 
@@ -180,6 +185,11 @@
       padding: 2vh 0
       cursor: pointer
       border-bottom: .1rem solid $gray-lighter
+
+      &:hover
+        color: $gold
+        transition: all 0.5s ease
+        transform: scale(1.1)
 
       +respond-at($breakpoint-S)
         padding: 0
@@ -204,6 +214,7 @@
         &:hover
           opacity: 1
           transform: scale(1.0)
+          color: $black
 
           &:before
             visibility: visible

@@ -1,7 +1,10 @@
 .content
   display: flex
   flex-direction: column
-  margin-top: 4.4rem
+  margin-top: 2rem
+
+  +respond-at($breakpoint-S)
+      margin-top: 4.4rem
 
   +respond-at($breakpoint-L)
     flex-direction: row-reverse
@@ -23,11 +26,14 @@
 
 .team__list
   list-style: none
-  margin: 9rem 0 0
+  margin: 3rem 0 0
   padding: 0
   display: flex
   flex-direction: column
   align-items: center
+
+  +respond-at($breakpoint-S)
+    margin-top: 9rem
 
   +respond-at($breakpoint-M)
     margin-top: 0
@@ -75,7 +81,7 @@
 .team__list__item__header
   position: relative
   height: 14rem
-  background: #3e3e3e
+  background: $black
 
   +respond-at($breakpoint-M)
     flex-shrink: 0
@@ -200,10 +206,10 @@
       padding-top: 0
 
     .title
-      margin: 2.5rem 0 4.7rem
+      margin: 2.5rem 0 4.7rem 0
 
       +respond-at($breakpoint-M)
-        margin: 0 0 4.7rem
+        margin: 0 0 4.7rem 4rem
         text-align: left
 
 
@@ -241,12 +247,14 @@
 
 
 .respect__infograph
+  margin-left: 9rem
+  width: 64.35rem
+  height: auto
   display: none
 
   +respond-at($breakpoint-M)
     display: block
-    width: 61.35rem
-    height: auto
+
 
 .respect__list
   +reset-list-style()
