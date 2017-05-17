@@ -20,8 +20,6 @@
     padding-right: 2rem
     width: 50%
 
-
-
 .main__header__menu__button
   +reset-button-style()
   margin: 0 auto
@@ -44,7 +42,6 @@
       weight: $weight-thin
     text-transform: uppercase
 
-
 #main-header-nav-container
   position: fixed
   width: 100%
@@ -62,18 +59,7 @@
     visibility: visible
     padding: 0 10vw
 
-  +respond-at($breakpoint-M)
-    position: relative
-    width: auto
-    height: auto
-    top: 0
-    left: 0
-    background: transparent
-    opacity: 1
-    visibility: visible
-    z-index: 1
-
-  .main__header__nav
+  .main__header__nav--narrow
     display: flex
     flex-direction: column
     justify-content: center
@@ -87,14 +73,7 @@
     +respond-at($breakpoint-S)
       text-align: center
 
-    +respond-at($breakpoint-M)
-      display: block
-      margin: auto
-      max-width: none
-      height: auto
-
-
-.outer-close
+  .outer-close
   position: absolute
   right: 0
   top: 0
@@ -131,98 +110,132 @@
       &::after
         transform: rotate(-45deg)
 
+  .main__header__menu__list
+    +reset-list-style()
+    font:
+      size: 2rem
+      weight: $weight-light
+    line-height: 6vh
+    border-top: .1rem solid $gray-lighter
 
-.main__header__menu__list
-  +reset-list-style()
-  font:
-    size: 2rem
-    weight: $weight-light
-  line-height: 6vh
-  border-top: .1rem solid $gray-lighter
+    +respond-at($breakpoint-S)
+      line-height: 10vh
 
-  +respond-at($breakpoint-S)
-    line-height: 10vh
+    .menu__list__item
+      display: block
+      text-transform: uppercase
+
+      &.menu__list__item--active
+        color: $gold
+
+        .menu__item__link
+          &:before
+            visibility: hidden
+
+
+      .menu__item__link
+        position: relative
+        display: block
+        color: inherit
+        text-decoration: none
+        padding: 2vh 0
+        cursor: pointer
+        border-bottom: .1rem solid $gray-lighter
+
+        &:hover
+          color: $gold
+          transition: all 0.5s ease
+          transform: scale(1.1)
+
+        +respond-at($breakpoint-S)
+          padding: 0
+
+          &:before
+            content: ""
+            position: absolute
+            width: 100%
+            height: .04rem
+            bottom: 0
+            left: 0
+            background: $gold
+            visibility: hidden
+            transform: scaleX(0)
+            transition: all 0.3s ease-in-out 0s
+
+          &:hover
+            opacity: 1
+            transform: scale(1.0)
+            color: $black
+
+            &:before
+              visibility: visible
+              transform: scaleX(1)
+
+.main__header__nav--full
+  display: none
 
   +respond-at($breakpoint-M)
     display: block
+
+  .main__header__menu__list
+    +reset-list-style()
     font:
       size: 1.27rem
       weight: $weight-regular
-    line-height: 2.5rem
-    border-top: none
 
   .menu__list__item
-    display: block
+    display: inline-block
     text-transform: uppercase
 
-    +respond-at($breakpoint-M)
-      display: inline-block
-
     &+.menu__list__item
-      +respond-at($breakpoint-M)
-        margin-left: 1.85rem
+      margin-left: 1.85rem
 
     &.menu__list__item--active
-      color: $gold
-      +respond-at($breakpoint-M)
-        color: $black
-        border-bottom: .15rem solid $gold
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: .05rem
+        bottom: -.75rem
+        left: 0
+        background: $gold
 
       .menu__item__link
         &:hover
-          +respond-at($breakpoint-M)
-            opacity: .8
+          opacity: 1
 
-        &:before
-          visibility: hidden
-
+          &:before
+            visibility: hidden
 
     .menu__item__link
       position: relative
       display: block
       color: inherit
       text-decoration: none
-      padding: 2vh 0
       cursor: pointer
-      border-bottom: .1rem solid $gray-lighter
+      transition: all 0.5s ease
+      opacity: .8
+
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: .05rem
+        bottom: -.75rem
+        left: 0
+        background: $gold
+        visibility: hidden
+        transform: scaleX(0)
+        transition: all 0.3s ease-in-out 0s
 
       &:hover
-        color: $gold
-        transition: all 0.5s ease
-        transform: scale(1.1)
-
-      +respond-at($breakpoint-S)
-        padding: 0
-
-      +respond-at($breakpoint-M)
-        opacity: .8
-        transition: transform 0.5s ease
-        border-bottom: 0
+        opacity: 1
+        transform: scale(1.0)
 
         &:before
-          content: ""
-          position: absolute
-          width: 100%
-          height: .04rem
-          bottom: 0
-          left: 0
-          background: $gold
-          visibility: hidden
-          transform: scaleX(0)
-          transition: all 0.3s ease-in-out 0s
-
-        &:hover
-          opacity: 1
-          transform: scale(1.0)
-          color: $black
-
-          &:before
-            visibility: visible
-            transform: scaleX(1)
-
-      +respond-at($breakpoint-L)
-        &:before
-          display: block
+          visibility: visible
+          transform: scaleX(1)
 
 
 .logo
