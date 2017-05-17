@@ -80,12 +80,16 @@
 
 .team__list__item__header
   position: relative
-  height: 14rem
-  background: $black
+  height: 13.5rem
+  background:
+    color: $black
+    image: url('/images/optimized/co-founder-bg.jpg')
+    size: cover
+    repeat: no-repeat
 
   +respond-at($breakpoint-M)
     flex-shrink: 0
-    width: 385px
+    width: 18.5rem
 
   +respond-at($breakpoint-L)
     width: auto
@@ -94,26 +98,23 @@
 
 
 .team__list__item__img__decorative__container
+  // display: none
   position: absolute
-  top: 1.5rem
-  left: 2rem
-  width: 11rem
+  top: 6rem
+  right: -.2rem
+  width: 95%
+  +respond-at(520px)
+    display: block
 
 .team__list__item__img__container
   z-index: 3
   overflow: hidden
   position: absolute
-  top: 1.5rem
-  right: 2rem
+  top: 1.8rem
+  right: 1.6rem
   width: 11rem
-  box-shadow: 0px 0.25rem 0.9rem 0px rgba(0, 0, 0, 0.23)
+  box-shadow: 0px 0.25rem 0.9rem 0px rgba(0, 0, 0, 0.45)
   border-radius: .25rem
-
-  +respond-at(420px)
-    width: 12.5rem
-
-  +respond-at($breakpoint-M)
-    width: 220px
 
   +respond-at($breakpoint-L)
     position: relative
@@ -165,10 +166,10 @@
   +divider(1px, $gray-lighter)
 
   &.divider--angeled-one
-    transform: rotate(-6deg)
+    transform: rotate(-3deg)
 
   &.divider--angeled-two
-    transform: rotate(6deg)
+    transform: rotate(3deg)
 
 
 .info__block
@@ -295,11 +296,13 @@
       z-index: 3
       position: absolute
       content: ""
-      bottom: -.4rem
-      height: 1.5rem
-      width: 1.5rem
-      background: white
-      border: 1px solid gray
+      bottom: -1.7rem
+      height: 100%
+      width: 2.4rem
+      background:
+        image: url('/images/optimized/svg/respect-list-symbol.svg')
+        size: contain
+        repeat: no-repeat
 
     &:nth-child(odd)
       padding-right: 25px
