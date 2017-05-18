@@ -23,6 +23,14 @@
     max-width: 100%
     height: auto
 
+  .collage__description
+    +respond-at($breakpoint-S)
+      padding: 0 7rem
+      line-height: 2.3rem
+      font-size: 1.7rem
+
+    +respond-at($breakpoint-L)
+      display: none
 
 .team__list
   list-style: none
@@ -100,7 +108,10 @@
     height: .15rem
     background-color: $gold
 
-    +respond-at(420px)
+  +respond-at(420px)
+    height: 13.5rem
+
+    &::before
       background:
         image: url('/images/optimized/svg/founder-lines-2.svg')
         size: contain
@@ -112,9 +123,6 @@
       margin: auto
       background-color: transparent
 
-  +respond-at(420px)
-    height: 13.5rem
-
     &::after
       z-index: 2
       position: absolute
@@ -122,10 +130,13 @@
       bottom: 4rem
       right: 0
       margin: 0 auto
-      width: 10%
+      width: 15%
       height: .15rem
       background-color: $gold
 
+  +respond-at($breakpoint-S)
+    &::after
+      height: .1rem
 
   +respond-at($breakpoint-M)
     flex-shrink: 0
@@ -134,12 +145,14 @@
     &::before
       bottom: -6.3rem
 
-
   +respond-at($breakpoint-L)
     width: auto
     height: auto
     background: transparent
     border-radius: 0
+
+    &::before
+      display: none
 
 .team__list__item__img__container
   overflow: hidden
@@ -152,7 +165,7 @@
     z-index: 3
     position: absolute
     top: 1.8rem
-    right: 1.6rem
+    right: 2.6rem
     margin: auto
     width: 10.6rem
 
