@@ -1,7 +1,7 @@
 .content
   display: flex
   flex-direction: column
-  margin-top: 2rem
+  margin-top: 2.5rem
 
   +respond-at($breakpoint-S)
     margin-top: 4.4rem
@@ -80,47 +80,97 @@
 
 .team__list__item__header
   position: relative
-  height: 13.5rem
+  height: 45vw
   background:
     color: $black
     image: url('/images/optimized/founder-bg.jpg')
     size: cover
     repeat: no-repeat
+  border-radius: .25rem
+
+  &::before
+    z-index: -1
+    position: absolute
+    content: ""
+    bottom: -.9rem
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 88%
+    height: .15rem
+    background-color: $gold
+
+    +respond-at(420px)
+      background:
+        image: url('/images/optimized/svg/founder-lines-2.svg')
+        size: contain
+        repeat: no-repeat
+      bottom: -5.4rem
+      left: 0
+      right: 0
+      height: 6.5rem
+      margin: auto
+      background-color: transparent
+
+  +respond-at(420px)
+    height: 13.5rem
+
+    &::after
+      z-index: 2
+      position: absolute
+      content: ""
+      bottom: 4rem
+      right: 0
+      margin: 0 auto
+      width: 10%
+      height: .15rem
+      background-color: $gold
+
 
   +respond-at($breakpoint-M)
     flex-shrink: 0
-    width: 18.5rem
+    width: 20.5rem
+
+    &::before
+      bottom: -6.3rem
+
 
   +respond-at($breakpoint-L)
     width: auto
     height: auto
     background: transparent
-
-
-.team__list__item__img__decorative__container
-  // display: none
-  position: absolute
-  top: 6rem
-  right: -.2rem
-  width: 95%
-  +respond-at(520px)
-    display: block
+    border-radius: 0
 
 .team__list__item__img__container
-  z-index: 3
   overflow: hidden
-  position: absolute
-  top: 1.8rem
-  right: 1.6rem
-  width: 11rem
+  margin: 1rem auto 0
+  width: 40vw
   box-shadow: 0px 0.25rem 0.9rem 0px rgba(0, 0, 0, 0.45)
   border-radius: .25rem
+
+  +respond-at(420px)
+    z-index: 3
+    position: absolute
+    top: 1.8rem
+    right: 1.6rem
+    margin: auto
+    width: 10.6rem
 
   +respond-at($breakpoint-L)
     position: relative
     top: auto
     right: auto
     width: 186px
+
+.team__list__item__img__decorative__container
+  display: none
+  position: absolute
+  top: 6rem
+  right: -.2rem
+  width: 95%
+
+  +respond-at(420px)
+    display: block
 
 .team__list__item__img
   display: block
@@ -129,8 +179,11 @@
 
 
 .team__list__item__info
-  margin-top: 6.2rem
+  margin-top: 13vw
   font-size: 1.3rem
+
+  +respond-at(420px)
+    margin-top: 6.2rem
 
   +respond-at($breakpoint-M)
     margin-left: 2.5rem
