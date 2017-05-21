@@ -26,19 +26,23 @@
   display: flex
   flex-direction: row
   align-items: center
+  font-size: 2.3rem
+
+  +respond-at($breakpoint-S)
+    font-size: 3.7rem
 
   +respond-at($breakpoint-M)
     display: none
 
   .button__icon
-    width: 2.4rem
+    width: .7em
     display:block
     margin-right: 0.4rem
 
   .button__text
     display: block
     font:
-      size: 2.7rem
+      size: .7em
       weight: $weight-thin
     text-transform: uppercase
 
@@ -116,14 +120,13 @@
     .main__header__menu__list
       +reset-list-style()
       font:
-        size: 1.5rem
+        size: 1rem
         weight: $weight-light
-      line-height: 6vh
+      line-height: 1.5rem
       border-top: .1rem solid $gray-lighter
 
       +respond-at($breakpoint-S)
-        font-size: 1.8rem
-        line-height: 7vh
+        font-size: 1.5rem
 
       .menu__list__item
         display: block
@@ -219,6 +222,7 @@
 .logo
   display: block
   margin: 2rem auto 0
+  max-width: 75%
 
   +respond-at($breakpoint-S)
     margin-top: 3.5rem

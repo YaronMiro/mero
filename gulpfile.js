@@ -209,6 +209,7 @@ gulp.task("serve:dev", ["styles", "jekyll:dev", "js"], function() {
   bs = browserSync({
     notify: true,
     open: true,
+    // host: '0.0.0.0',
     // tunnel: "",
     server: {
       baseDir: "serve"

@@ -24,13 +24,23 @@
     height: auto
 
   .collage__description
+    margin: 1.5rem auto 0
+    font-size: 1rem
+    line-height: 1.5rem
+
+    +respond-at(420px)
+      padding: 0 20%
+
     +respond-at($breakpoint-S)
-      padding: 0 7rem
-      line-height: 2.3rem
-      font-size: 1.7rem
+      max-width: 30rem
+      // font-size: 1.5rem
 
     +respond-at($breakpoint-L)
-      display: none
+      // display: none
+
+    strong
+      font-weight: 300
+
 
 .team__list
   list-style: none
