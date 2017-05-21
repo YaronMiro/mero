@@ -33,10 +33,6 @@
 
     +respond-at($breakpoint-S)
       max-width: 30rem
-      // font-size: 1.5rem
-
-    +respond-at($breakpoint-L)
-      // display: none
 
     strong
       font-weight: 300
@@ -61,13 +57,15 @@
   position: relative
   display: flex
   flex-direction: column
-  max-width: 25rem
+  margin: 0 7vw
+
+  +respond-at(420px)
+    margin: 0 12%
 
   +respond-at($breakpoint-M)
     flex-direction: row
     align-items: center
-    margin-bottom: 70px
-    max-width: 860px
+    margin-bottom: 3rem
 
   +respond-at($breakpoint-L)
     margin-bottom: 0
@@ -98,7 +96,7 @@
 
 .team__list__item__header
   position: relative
-  height: 45vw
+  height: 40vw
   background:
     color: $black
     image: url('/images/optimized/founder-bg.jpg')
@@ -110,7 +108,7 @@
     z-index: -1
     position: absolute
     content: ""
-    bottom: -.9rem
+    bottom: -1rem
     left: 0
     right: 0
     margin: 0 auto
@@ -118,42 +116,8 @@
     height: .15rem
     background-color: $gold
 
-  +respond-at(420px)
-    height: 13.5rem
-
-    &::before
-      background:
-        image: url('/images/optimized/svg/founder-lines-2.svg')
-        size: contain
-        repeat: no-repeat
-      bottom: -5.4rem
-      left: 0
-      right: 0
-      height: 6.5rem
-      margin: auto
-      background-color: transparent
-
-    &::after
-      z-index: 2
-      position: absolute
-      content: ""
-      bottom: 4rem
-      right: 0
-      margin: 0 auto
-      width: 15%
-      height: .15rem
-      background-color: $gold
-
-  +respond-at($breakpoint-S)
-    &::after
-      height: .1rem
-
   +respond-at($breakpoint-M)
-    flex-shrink: 0
-    width: 20.5rem
-
-    &::before
-      bottom: -6.3rem
+    // flex-shrink: 0
 
   +respond-at($breakpoint-L)
     width: auto
@@ -166,34 +130,17 @@
 
 .team__list__item__img__container
   overflow: hidden
-  margin: 1rem auto 0
-  width: 40vw
+  margin: 4vw auto 0
+  width: 36vw
   box-shadow: 0px 0.25rem 0.9rem 0px rgba(0, 0, 0, 0.45)
   border-radius: .25rem
 
   +respond-at(420px)
-    z-index: 3
-    position: absolute
-    top: 1.8rem
-    right: 2.6rem
-    margin: auto
-    width: 10.6rem
+    width: 50%
 
   +respond-at($breakpoint-L)
-    position: relative
-    top: auto
-    right: auto
     width: 186px
 
-.team__list__item__img__decorative__container
-  display: none
-  position: absolute
-  top: 6rem
-  right: -.2rem
-  width: 95%
-
-  +respond-at(420px)
-    display: block
 
 .team__list__item__img
   display: block
@@ -203,23 +150,18 @@
 
 .team__list__item__info
   margin-top: 13vw
-  font-size: 1.3rem
-
-  +respond-at(420px)
-    margin-top: 6.2rem
+  font-size: 1rem
+  line-height: 1.5rem
 
   +respond-at($breakpoint-M)
-    margin-left: 2.5rem
-    max-width: 25rem
 
   +respond-at($breakpoint-L)
     margin-top: 0
 
 .team__list__item__title
   text-transform: uppercase
-  text-transform: uppercase
   margin: .8rem 0 .58rem
-  font-size: 1.6rem
+  font-size: 1em
   font-weight: $weight-regular
 
   +respond-at($breakpoint-L)
@@ -232,7 +174,7 @@
   .attributes__item
 
     &+.attributes__item
-      margin-top: .4rem
+      margin-top: .1em
 
 .team__list__item__description
   margin-bottom: 0
