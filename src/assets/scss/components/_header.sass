@@ -9,8 +9,8 @@
     border-bottom: 0
 
 .main__header__menu
-  padding-bottom: 0.9rem
-  border-bottom: .1rem solid $black
+  padding-bottom: .5rem
+  border-bottom: 1px solid $black
 
   +respond-at($breakpoint-M)
     border-bottom: 0
@@ -22,11 +22,14 @@
 
 .main__header__menu__button
   +reset-button-style()
-  margin: 0 auto
   display: flex
+  margin: 0 auto
+  padding: 0 5%
+  width: 100%
   flex-direction: row
   align-items: center
-  font-size: 2.3rem
+  justify-content: space-between
+  font-size: 2.7rem
 
   +respond-at($breakpoint-S)
     font-size: 3.7rem
@@ -43,7 +46,7 @@
     display: block
     font:
       size: .7em
-      weight: $weight-thin
+      weight: $weight-light
     text-transform: uppercase
 
 #main-header-nav-container
@@ -123,7 +126,7 @@
         size: 1rem
         weight: $weight-light
       line-height: 1.5rem
-      border-top: .1rem solid $gray-lighter
+      border-top: 1px solid $black
 
       +respond-at($breakpoint-S)
         font-size: 1.5rem
@@ -144,9 +147,9 @@
           display: block
           color: inherit
           text-decoration: none
-          padding: 2vh 0
+          padding: 5vh 5%
           cursor: pointer
-          border-bottom: .1rem solid $gray-lighter
+          border-bottom: 1px solid $black
 
           &:hover
             color: $gold
@@ -221,11 +224,11 @@
 
 .logo
   display: block
-  margin: 2rem auto 0
+  margin: 2.5rem auto 0
   max-width: 75%
 
   +respond-at($breakpoint-S)
-    margin-top: 3.5rem
+    margin-top: 4rem
     max-width: 95%
 
   +respond-at($breakpoint-S)
