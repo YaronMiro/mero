@@ -5,6 +5,7 @@
   "devDependencies": {
     "jquery": "^3.2.1",
     "floatl": "^1.0.5",
-    "aos": "^2.1.1"
+    "aos": "^2.1.1",
+    "retina.js-js": "^1.0.2"
   }
 }
