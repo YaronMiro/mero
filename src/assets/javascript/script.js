@@ -58,10 +58,32 @@ function inScrollAnimateEffect() {
 }
 
 /**
- * Init the Animsition page load effect (http://git.blivesta.com/animsition/).
+ * Init the Animsition page load effect.
  *
  */
 function pageLoadAnimateEffect() {
+}
+
+
+/**
+ * Init the header scroll and fixed position (http://callmenick.com/post/animated-resizing-header-on-scroll).
+ *
+ */
+function initScrollHeader(shrinkHeight) {
+  var $window = $(window);
+  var $document = $(document);
+  var scrollClassName = 'after__scroll';
+  $window.scroll(function(event){
+    var distanceY = $window.pageYOffset || $document.scrollTop()
+    // var $header = $('.main__header');
+    var $header = $('.main__header__menu__button');
+    if (distanceY > shrinkHeight) {
+      $header.addClass(scrollClassName);
+    }
+    else if ($header.hasClass(scrollClassName)) {
+      $header.removeClass(scrollClassName);
+    }
+  });
 }
 
 
