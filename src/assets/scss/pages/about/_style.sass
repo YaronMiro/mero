@@ -191,7 +191,7 @@
 .team__list__item__title
   text-transform: uppercase
   margin: .8em 0 .58em
-  font-size: 1em
+  font-size: 1.1em
   font-weight: $weight-regular
 
   +respond-at($breakpoint-M)
@@ -226,6 +226,8 @@
 
 .info__block
   text-align: center
+  font-size: 1rem
+  line-height: 1.5rem
 
   +respond-at(420px)
     padding-right: 1.5rem
@@ -241,24 +243,22 @@
     font:
       family: $anton
       weight: normal
-    font-size: 3rem
+      size: 2.5em
+    line-height: 1em
 
     +respond-at(520px)
-      font-size: 4.2rem
+      font-size: 4.2em
 
 
   .sub-title
-    margin: 0 1.5rem 0
+    margin: .6rem 1.5rem 0
     color: $gold
-    font:
-      size: 1.2rem
-      weight: $weight-regular
-    line-height: 1.5rem
+    font-weight: $weight-regular
+
 
   .description
     margin: 1rem 0 0
-    font-size: 1rem
-    line-height: 1.5rem
+    font-size: 1em
 
   &.info__block--respect
     +respond-at($breakpoint-L)
@@ -276,9 +276,6 @@
   &.info__block--core
     .title
       text-transform: uppercase
-
-    .sub-title
-      margin-top: -.5rem
 
   &.info__block--design
     .title
@@ -330,11 +327,11 @@
   .respect__list__item
     position: relative
     padding-bottom: 0
-    font-size: 1.25rem
-    line-height: 1.2rem
+    font-size: 1rem
+    line-height: 1.5rem
 
     +respond-at($breakpoint-S)
-      font-size: 1.4rem
+      font-size: 1em
 
     &+.respect__list__item
       margin-top: 2rem
@@ -342,7 +339,6 @@
     .name
       display: inline-block
       padding: 0 2rem
-      line-height: 2.1rem
 
     .respect__list__item__img
       width: 73%
