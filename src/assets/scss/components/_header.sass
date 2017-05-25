@@ -110,12 +110,11 @@
     display: flex
     flex-direction: column
     justify-content: center
-    margin: 0 auto
-    height: 95vh
+    margin: 6rem auto 0
     text-align: left
 
     +respond-at(420px)
-      max-width: 60vw
+      max-width: 60%
 
     +respond-at($breakpoint-S)
       text-align: center
@@ -147,7 +146,7 @@
           display: block
           color: inherit
           text-decoration: none
-          padding: 5vh 5%
+          padding: 10% 5%
           cursor: pointer
           border-bottom: 1px solid $black
 
@@ -229,13 +228,12 @@
 
   +respond-at($breakpoint-S)
     margin-top: 4rem
-    max-width: 95%
 
   +respond-at($breakpoint-S)
     margin-top: 5rem
 
   +respond-at($breakpoint-L)
-    max-width: auto
+    max-width: none
     margin: 0
 
   .logo__img
