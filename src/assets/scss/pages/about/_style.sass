@@ -45,6 +45,9 @@
       font-size: 1.7rem
       line-height: 2.3rem
 
+    +respond-at($breakpoint-L)
+      display: none
+
     strong
       font-weight: 300
 
@@ -60,6 +63,12 @@
   +respond-at($breakpoint-S)
     margin-top: 7rem
 
+  +respond-at($breakpoint-M)
+    margin-top: 12rem
+
+  +respond-at($breakpoint-L)
+    margin-top: 0
+
 .team__list__item
   position: relative
   display: flex
@@ -72,7 +81,7 @@
   +respond-at($breakpoint-M)
     flex-direction: row
     align-items: center
-    margin: 0 15% 3rem
+    margin: 0 10% 3rem
 
   +respond-at($breakpoint-L)
     margin: 0
@@ -80,9 +89,9 @@
     &::before
       position: absolute
       content: ""
-      top: 44px
-      left: 186px
-      height: 160px
+      top: 1rem
+      left: 9.4rem
+      height: 11rem
       width: 20px
       border-top: 2px solid $gold
       border-bottom: 2px solid $gold
@@ -110,7 +119,7 @@
   +image-2x('/images/optimized/founder-bg@x2.jpg')
   background-size: cover
   background-repeat: no-repeat
-  border-radius: 3px
+  border-radius: 5px
 
   &::before
     z-index: -1
@@ -126,14 +135,21 @@
 
   +respond-at(500px)
     height: 7rem
+    &::before
+      bottom: -1rem
 
   +respond-at($breakpoint-S)
-      height: 9rem
+    height: 9rem
 
   +respond-at($breakpoint-M)
-    // flex-shrink: 0
+    flex-shrink: 0
+    width: 18rem
+    height: 9.5rem
+    margin-top: -7rem
+    margin-right: 2rem
 
   +respond-at($breakpoint-L)
+    margin-top: 0
     width: auto
     height: auto
     background: transparent
@@ -146,7 +162,7 @@
   overflow: hidden
   margin: 1rem auto 0
   width: 6rem
-  border-radius: 3px
+  border-radius: 5px
 
   +respond-at(500px)
     width: 7rem
@@ -154,8 +170,12 @@
   +respond-at($breakpoint-S)
     width: 9rem
 
+  +respond-at($breakpoint-M)
+    margin-top: 1.5rem
+
   +respond-at($breakpoint-L)
-    width: 186px
+    margin-top: 0
+    width: 9.5rem
 
 
 .team__list__item__img
@@ -255,7 +275,11 @@
     padding-bottom: 0
 
     +respond-at($breakpoint-M)
+      margin-top: 14rem
       padding-top: 0
+
+    +respond-at($breakpoint-L)
+      margin-top: 0
 
     .title
       margin: 2.5rem 0 4.7rem 0
