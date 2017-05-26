@@ -67,6 +67,13 @@
   +respond-at($breakpoint-M)
     margin: 10rem 0 1rem
 
+  +respond-at($breakpoint-L)
+    margin: 0
+
+  &.team__list--last
+    +respond-at($breakpoint-L)
+      margin-top: 5rem
+
 .team__list__item
   position: relative
   display: flex
@@ -131,15 +138,6 @@
     width: 12.2rem
     height: 8rem
 
-    &::before
-      display: none
-    //   bottom: 0
-    //   right: -1.4rem
-    //   width: 1px
-    //   left: auto
-    //   height: calc(100% + 2rem)
-    //   top: -1rem
-
 .team__list__item__img__container
   overflow: hidden
   margin: 1rem auto 0
@@ -187,6 +185,7 @@
   +respond-at($breakpoint-L)
     margin-top: 0
     padding-right: 3rem
+    font-size: 1.2rem
 
 .team__list__item__title
   text-transform: uppercase
@@ -279,27 +278,27 @@
 
   &.info__block--design
     .title
-      font-size: 4.2rem
+      +respond-at($breakpoint-S)
+        font-size: 4.2rem
 
   &.info__block--quality
     .title
-      font-size: 3.75rem
+      +respond-at($breakpoint-S)
+        font-size: 3.75rem
 
       small
         display: block
-        font-size: 2.45rem
-
-        +respond-at(580px)
+        +respond-at($breakpoint-S)
           display: inline-block
+          font-size: 2.45rem
 
   &.info__block--clientele
     .title
       display: inline-block
       padding: .5rem 1rem
-      font-size: 2.55rem
-      border: .14rem solid $gold
+      border: 2px solid $gold
 
-      +respond-at(380px)
+      +respond-at($breakpoint-S)
         font-size: 3.2rem
 
 

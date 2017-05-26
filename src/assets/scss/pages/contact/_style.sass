@@ -2,16 +2,15 @@
   .contact__us__title
     text-align: center
     font:
+      size: 2.5rem
       family: $anton
       weight: normal
-    font-size: 3.75rem
 
-    +respond-at(420px)
+    +respond-at($breakpoint-S)
       font-size: 4.85rem
 
   .form__contact__fields__container
-    font:
-      size: 2.5rem
+    font-size: 1rem
 
     .form__contact__field
       min-height: 4.5rem
@@ -31,6 +30,9 @@
       .floatl__label
         color: $error
 
+    .floatl__label
+      padding: 0.5em 0 0
+
     input.floatl__input,
     textarea.floatl__input
       color: inherit
@@ -38,7 +40,7 @@
       background-color: transparent
       letter-spacing: inherit
       font:
-        size: 1.25rem
+        size: 1em
         family: inherit
 
     input.floatl__input
@@ -53,9 +55,8 @@
 
     .floatl__label
       margin: 0 0 .7rem
-      padding: .4rem .3rem .3rem
       font:
-        size: .4em
+        size: 1em
         weight: $weight-light
 
 
@@ -64,7 +65,7 @@
       color: $gold
 
     .floatl--active .floatl__input
-      padding: 1.5em .55em .3em
+      padding: 2em .55em .3em
 
     .floatl__input
       padding: 1.1em 1em .3em
@@ -87,7 +88,7 @@
   .form__contact__description
     font:
       family: $aileron, Arial, sans-serif
-      size: 1.2rem
+      size: 1rem
       weight: $weight-thin
     color: lighten($black, 55%)
 
@@ -120,7 +121,7 @@
     background-color: $black
     letter-spacing: .04rem
     font:
-      size: 1.4rem
+      size: 1rem
       weight: $weight-light
 
     +respond-at(420px)
