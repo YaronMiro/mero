@@ -97,7 +97,6 @@ function initScrollHeader(shrinkHeight) {
 
 $(document).ready(function() {
   pageLoadAnimateEffect();
-  svgLoadAnimateEffect();
   inScrollAnimateEffect();
   testBrowser();
   toggleNavigationDisplay();
