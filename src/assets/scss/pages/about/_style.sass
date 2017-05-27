@@ -210,15 +210,17 @@
 
 .divider
   +divider(1px, $gray-lighter)
+
+.divider__wrapper
   margin: 3rem 0 3.2rem
 
   +respond-at($breakpoint-S)
     margin: 4rem 0 5rem
 
-  &.divider--angeled-one
+  &.divider__wrapper--angeled-one
     transform: rotate(-3deg)
 
-  &.divider--angeled-two
+  &.divider__wrapper--angeled-two
     transform: rotate(3deg)
 
 

@@ -1,8 +1,8 @@
 <svg version="1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.2 129">
   <style>
-    .st0{fill:#323232;} .st1{fill:#AFA282;stroke:#323232;stroke-width:0.6706;stroke-miterlimit:10;} .st2{fill:#989898;stroke:#323232;stroke-width:0.6706;stroke-miterlimit:10;}
+    .st0{fill:#000000;} .st1{fill:#AFA282;stroke:#000000;stroke-width:0.6706;stroke-miterlimit:10;} .st2{fill:#989898;stroke:#000000;stroke-width:0.6706;stroke-miterlimit:10;}
   </style>
-  <path class="st0" d="M33.9.3l191.8 114.2L93.6 67.6z"/>
-  <path class="st1" d="M.4 128.5l57.9.2 35.3-60.8L33.9.7z"/>
-  <path class="st2" d="M225.6 114.9l-9.1 13.5-158.2.3L93.6 68z"/>
+  <path vector-effect="non-scaling-stroke" class="st0" d="M33.9.3l191.8 114.2L93.6 67.6z"/>
+  <path vector-effect="non-scaling-stroke" class="st1" d="M.4 128.5l57.9.2 35.3-60.8L33.9.7z"/>
+  <path vector-effect="non-scaling-stroke" class="st2" d="M225.6 114.9l-9.1 13.5-158.2.3L93.6 68z"/>
 </svg>
