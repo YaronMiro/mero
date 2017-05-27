@@ -1,8 +1,8 @@
-<svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 271.2 160.7">
+<svg version="1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.6 154.8">
   <style>
-    .st0{fill:#323232;} .st1{fill:#989898;stroke:#323232;stroke-width:0.8078;stroke-miterlimit:10;} .st2{fill:#AFA282;stroke:#323232;stroke-width:0.8078;stroke-miterlimit:10;}
+    .st0{fill:#323232;} .st1{fill:#AFA282;stroke:#323232;stroke-width:0.8078;stroke-miterlimit:10;} .st2{fill:#989898;stroke:#323232;stroke-width:0.8078;stroke-miterlimit:10;}
   </style>
-  <path class="st0" d="M252.7 159.5L2.6 58.6l166.5 31.8z" id="black-layer"/>
-  <path class="st1" d="M2.6 58.1L11 40.3l189.3-28.7-31.2 78.3z" id="gray-layer"/>
-  <path class="st2" d="M269.6 1.5l-69.3 10.1L169 90l83.7 69z" id="bronze-layer"/>
+  <path class="st0" d="M232.9 154.4L.6 17.5l159.9 56.1z"/>
+  <path class="st1" d="M273.1.7L203 .4l-42.5 72.9 72.5 80.6z"/>
+  <path class="st2" d="M.6 17L11.6.7 203 .4l-42.4 72.7z"/>
 </svg>
