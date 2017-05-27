@@ -28,6 +28,9 @@
   .form__contact__fields__container
     font-size: 1rem
 
+    +respond-at($breakpoint-M)
+      font-size: 1.15rem
+
     .form__contact__field
       min-height: 4.5rem
       border-bottom: 1px solid $gray-lighter
@@ -110,18 +113,13 @@
 
   .form__contact__description__item
     margin-top: .5rem
-    position: relative
     display: block
-    padding-left: 1.5em
     line-height: 1.5em
 
     &::before
-      position: absolute
       content: "*"
-      top: -.15rem
-      left: 0
+      padding-right: .5em;
       color: $gold
-      font-size: 2em
 
 
   .form__contact__submit__button
@@ -136,7 +134,7 @@
     background-color: $black
     letter-spacing: .04rem
     font:
-      size: 1rem
+      size: 1.2rem
       weight: $weight-regular
 
     +respond-at(420px)
