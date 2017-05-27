@@ -55,7 +55,6 @@
     strong
       font-weight: $weight-semi-bold
 
-
 .team__list
   list-style: none
   margin: 0
@@ -93,7 +92,6 @@
 
   &+.team__list__item
     margin-top: 4rem
-
 
 .team__list__item__header
   position: relative
@@ -157,12 +155,10 @@
     margin-top: calc(50% - 7.5rem)
     width: 8.5rem
 
-
 .team__list__item__img
   display: block
   max-width: 100%
   height: auto
-
 
 .team__list__item__info
   margin-top: 3.5rem
@@ -195,7 +191,6 @@
   +respond-at($breakpoint-M)
     margin-top: 0
 
-
 .team__list__item__attributes
   +reset-list-style()
 
@@ -207,11 +202,11 @@
 .team__list__item__description
   margin-bottom: 0
 
-
 .divider
   +divider(1px, $gray-lighter)
 
 .divider__wrapper
+  position: relative
   margin: 3rem 0 3.2rem
 
   +respond-at($breakpoint-S)
@@ -222,7 +217,6 @@
 
   &.divider__wrapper--angeled-two
     transform: rotate(3deg)
-
 
 .info__block
   text-align: center
@@ -309,7 +303,6 @@
       text-align: left
 
     +respond-at($breakpoint-L)
-      padding-left: 0
 
     .title
       text-transform: uppercase
@@ -399,7 +392,6 @@
     margin-left: 13rem
     width: 57rem
 
-
 .respect__list
   +reset-list-style()
   max-width: 28.5rem
@@ -428,3 +420,18 @@
       width: 73%
       margin: 0 auto
       display: block
+
+.clientele__img
+  display: none
+
+  +respond-at($breakpoint-M)
+    z-index: 3
+    position: absolute
+    display: block
+    top: -4.3rem
+    right: 5rem
+    width: 11rem
+
+  +respond-at($breakpoint-L)
+    top: -4.3rem
+    right: 7rem
