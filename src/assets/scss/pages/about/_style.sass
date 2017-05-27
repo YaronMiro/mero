@@ -237,25 +237,24 @@
 
   +respond-at($breakpoint-L)
     margin: 0 auto
-    padding-right: auto
-    padding-left: auto
+    padding-right: 7.5rem
+    padding-left: 7.5rem
     max-width: 50rem
 
 
   .title
-    margin: 0 0 .5rem
+    margin: 0
     font:
       family: $anton
       weight: normal
       size: 2em
-    line-height: .8em
+    line-height: 1.2em
 
     +respond-at(520px)
       font-size: 3em
 
     +respond-at($breakpoint-S)
       font-size: 4.5em
-
 
   .sub__title
     margin: 0
@@ -331,6 +330,7 @@
         margin: 0
 
     .description
+      margin-top: 0
       +respond-at($breakpoint-M)
         margin: 0
 
@@ -369,7 +369,7 @@
 
     .title
       display: inline-block
-      padding: .9rem 1.2rem
+      padding: .5em .5em .2em
       border: 2px solid $gold
 
       +respond-at($breakpoint-M)
@@ -384,9 +384,6 @@
     .description
       +respond-at($breakpoint-M)
         max-width: 32rem
-      +respond-at($breakpoint-L)
-        max-width: 40rem
-
 
 .respect__infograph
   width: 100%
