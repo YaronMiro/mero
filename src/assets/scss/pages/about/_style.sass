@@ -233,8 +233,8 @@
 
   +respond-at($breakpoint-L)
     margin: 0 auto
-    padding-right: 7.5rem
-    padding-left: 7.5rem
+    padding-left: 2.5rem
+    padding-right: 9.5rem
     max-width: 50rem
 
 
@@ -256,7 +256,6 @@
     margin: 0
     color: $gold
     font-weight: $weight-semi-bold
-
 
     +respond-at(520px)
       font-size: 1.2em
@@ -332,8 +331,14 @@
 
   &.info__block--design
     +respond-at($breakpoint-M)
-      text-align: left
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem
       max-width: 70rem
+      text-align: left
+
+    +respond-at($breakpoint-L)
+      padding-top: 3.5rem
+      padding-bottom: 3.5rem
 
     .title
       +respond-at($breakpoint-S)
@@ -343,7 +348,16 @@
       +respond-at($breakpoint-M)
         margin-left: 0
 
+
   &.info__block--quality
+    +respond-at($breakpoint-M)
+      padding-bottom: 5.5rem
+      padding-top: 1rem
+
+    +respond-at($breakpoint-L)
+      margin-left: 24rem
+      padding: 0 0 0 5rem
+
     .title
       +respond-at($breakpoint-S)
         font-size: 3.75rem
@@ -360,6 +374,7 @@
       flex-direction: row
       align-items: center
       max-width:  70rem
+      padding-bottom: 2.5rem
       text-align: left
 
     .title
@@ -421,17 +436,49 @@
       margin: 0 auto
       display: block
 
-.clientele__img
+.info__block__clientele__img
   display: none
 
   +respond-at($breakpoint-M)
     z-index: 3
     position: absolute
     display: block
-    top: -4.3rem
+    top: -3.9rem
     right: 5rem
-    width: 11rem
+    width: 10rem
 
   +respond-at($breakpoint-L)
-    top: -4.3rem
+    top: -4rem
     right: 7rem
+
+.info__block__quality__img
+  display: none
+
+  +respond-at($breakpoint-M)
+    z-index: 3
+    position: absolute
+    display: block
+    bottom: 0
+    left: 5rem
+    width: 11.5rem
+
+  +respond-at($breakpoint-L)
+    left: 15rem
+
+.info__block__core__img
+  display: none
+  width: 11.5rem
+
+  &.core__img--small
+    +respond-at($breakpoint-S)
+      display: block
+    // bottom: 0
+    // left: 5rem
+    //
+
+    +respond-at($breakpoint-M)
+      display: none
+
+  &.core__img--large
+    +respond-at($breakpoint-M)
+      display: block
