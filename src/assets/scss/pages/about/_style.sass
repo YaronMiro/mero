@@ -236,6 +236,12 @@
     padding-right: 2.5rem
     padding-left: 2.5rem
 
+  +respond-at($breakpoint-L)
+    margin: 0 auto
+    padding-right: auto
+    padding-left: auto
+    max-width: 50rem
+
 
   .title
     margin: 0 0 .5rem
@@ -252,7 +258,7 @@
       font-size: 4.5em
 
 
-  .sub-title
+  .sub__title
     margin: .6rem 2rem 0
     color: $gold
     font-weight: $weight-regular
@@ -272,28 +278,75 @@
       font-size: 1.3em
       line-height: 1.5em
 
+    +respond-at($breakpoint-L)
+      font-size: 1.25em
+
 
   &.info__block--respect
+    +respond-at($breakpoint-M)
+      max-width: none
+
     +respond-at($breakpoint-L)
-      margin: 7rem 0 9rem
+      margin: 0 0 9rem
 
     .title
       +respond-at($breakpoint-M)
-        margin: 0 4.5rem 4.5rem
+        margin: 0 4.5rem 4.5rem 0
         text-align: left
 
       +respond-at($breakpoint-L)
-        margin-top: 4.5rem
+        margin-top: 1.5rem
+        margin-left: 6.5rem
 
 
   &.info__block--core
+    +respond-at($breakpoint-M)
+      display: flex
+      flex-direction: row
+      align-items: center
+      max-width:  70rem
+      text-align: left
+
+    +respond-at($breakpoint-L)
+      padding-left: 0
+
     .title
       text-transform: uppercase
+      +respond-at($breakpoint-M)
+        margin: 0 2rem 0 0
+        transform: rotate(-10deg)
+
+    .sub__title
+      display: block
+      margin-bottom: 1rem
+
+      +respond-at(520px)
+        font-size: 1.2rem
+
+      +respond-at($breakpoint-S)
+        font-size: 1.3rem
+        line-height: 1.8rem
+
+      +respond-at($breakpoint-M)
+        margin: 0
+
+    .description
+      +respond-at($breakpoint-M)
+        margin: 0
+
 
   &.info__block--design
+    +respond-at($breakpoint-M)
+      text-align: left
+      max-width: 70rem
+
     .title
       +respond-at($breakpoint-S)
         font-size: 4.2rem
+
+    .sub__title
+      +respond-at($breakpoint-M)
+        margin-left: 0
 
   &.info__block--quality
     .title
@@ -309,7 +362,7 @@
   &.info__block--clientele
     .title
       display: inline-block
-      padding: .5rem 1rem
+      padding: .9rem 1.2rem
       border: 2px solid $gold
 
       +respond-at($breakpoint-S)
@@ -326,7 +379,7 @@
 
   +respond-at($breakpoint-L)
     margin-left: 9rem
-    width: 62rem
+    width: 55rem
 
 
 .respect__list
