@@ -101,7 +101,6 @@
   background-color: $black
   background-image: url('/images/optimized/founder-bg.jpg')
   +image-2x('/images/optimized/founder-bg@x2.jpg')
-  background-size: cover
   background-repeat: no-repeat
   border-radius: 5px
 
@@ -360,13 +359,32 @@
           font-size: 2.45rem
 
   &.info__block--clientele
+    +respond-at($breakpoint-M)
+      display: flex
+      flex-direction: row
+      align-items: center
+      max-width:  70rem
+      text-align: left
+
     .title
       display: inline-block
       padding: .9rem 1.2rem
       border: 2px solid $gold
 
+      +respond-at($breakpoint-M)
+        display: block
+        margin-right: 2rem
+        padding: 0
+        border: 0
+
       +respond-at($breakpoint-S)
         font-size: 3.2rem
+
+    .description
+      +respond-at($breakpoint-M)
+        max-width: 32rem
+      +respond-at($breakpoint-L)
+        max-width: 40rem
 
 
 .respect__infograph

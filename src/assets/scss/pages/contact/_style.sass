@@ -1,4 +1,16 @@
 .contact__us
+  +respond-at(420px)
+    padding-right: 1.5rem
+    padding-left: 1.5rem
+
+  +respond-at($breakpoint-S)
+    padding-right: 2.5rem
+    padding-left: 2.5rem
+
+  +respond-at($breakpoint-M)
+    margin: 0 auto
+    max-width: 70rem
+
   .contact__us__title
     text-align: center
     font:
@@ -9,8 +21,9 @@
     +respond-at(520px)
       font-size: 3rem
 
-    +respond-at($breakpoint-S)
-      font-size: 4.5rem
+    +respond-at($breakpoint-M)
+      text-align: left
+
 
   .form__contact__fields__container
     font-size: 1rem
