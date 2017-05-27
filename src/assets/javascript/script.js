@@ -97,7 +97,6 @@ function initScrollHeader(shrinkHeight) {
 
 $(document).ready(function() {
   pageLoadAnimateEffect();
-  inScrollAnimateEffect();
   testBrowser();
   toggleNavigationDisplay();
   initFloatLabel('floatl__js');
