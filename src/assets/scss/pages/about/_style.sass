@@ -98,8 +98,10 @@
   height: 6rem
   background-color: $black
   background-image: url('/images/optimized/founder-bg.jpg')
-  +image-2x('/images/optimized/founder-bg@x2.jpg')
+  +retina('/images/optimized/founder-bg.jpg', 2, 100% 100%)
+  +retina('/images/optimized/founder-bg.jpg', 3, 100% 100%)
   background-repeat: no-repeat
+  background-size: 100% 100%
   border-radius: 3px
 
   &::before

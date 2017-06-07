@@ -86,14 +86,6 @@ function pageLoadAnimateEffect() {
   });
 }
 
-/**
- * Init the  SVG Animsitions effect.
- *
- */
-function svgLoadAnimateEffect() {
-  new Vivus('svg-logo', {duration: 300}, function(){});
-}
-
 
 /**
  * Init the header scroll and fixed position (http://callmenick.com/post/animated-resizing-header-on-scroll).
