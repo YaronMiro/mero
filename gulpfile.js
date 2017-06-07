@@ -98,7 +98,13 @@ gulp.task("fonts", function() {
 // Copies favicon to the site folder
 gulp.task("copy:favicons", function() {
   return gulp.src("src/assets/favicons/**/*")
-    .pipe(gulp.dest("site/assets/favicons"));
+    .pipe(gulp.dest("site/"));
+});
+
+// Copies favicon to the site folder
+gulp.task("devFavicons", function() {
+  return gulp.src("src/assets/favicons/**/*")
+    .pipe(gulp.dest("src/"));
 });
 
 // Copy bower.
@@ -245,7 +251,7 @@ gulp.task("serve:prod", ["publish-local"], function() {
 });
 
 // Default task, run when just writing "gulp" in the terminal
-gulp.task("default", ["serve:dev", "watch"]);
+gulp.task("default", ["devFavicons","serve:dev", "watch"]);
 
 
 // Builds the site but doesn"t serve it to you

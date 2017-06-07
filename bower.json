@@ -8,6 +8,7 @@
     "aos": "^2.1.1",
     "retina.js-js": "^1.0.2",
     "normalize-css": "^7.0.0",
-    "vivus": "^0.4.0"
+    "vivus": "^0.4.0",
+    "animsition": "^4.0.2"
   }
 }
