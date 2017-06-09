@@ -45,7 +45,9 @@ function initFloatLabel(className) {
 function toggleNavigationDisplay() {
   $('.main__header__menu__button').click(function() {
     $('#main-header-nav-container').toggleClass('open__mobile__navigation');
-  });
+    $('html').toggleClass('no__scroll');
+    $('body').toggleClass('no__scroll');
+    });
 }
 
 
@@ -65,16 +67,16 @@ function pageLoadAnimateEffect() {
   $(".animsition").animsition({
     inClass: 'zoom-in-sm',
     outClass: 'zoom-out-sm',
-    inDuration: 800,
-    outDuration: 800,
+    inDuration: 500,
+    outDuration: 500,
     linkElement: '.animsition-link',
     // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
     loading: true,
     loadingParentElement: 'body', //animsition wrapper element
     loadingClass: 'animsition-loading',
     loadingInner: '', // e.g '<img src="loading.svg" />'
-    timeout: true,
-    timeoutCountdown: 2000, // default was 5000
+    timeout: false,
+    timeoutCountdown: 1000, // default was 5000
     onLoadEvent: true,
     browser: [ 'animation-duration', '-webkit-animation-duration'],
     // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.

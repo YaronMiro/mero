@@ -1,6 +1,18 @@
 html
   font-size: 16px
 
+  &.no__scroll
+    overflow-y: scroll !important
+    overflow: hidden !important
+    height: 100% !important
+    margin-top: 0 !important
+
 body
   color: $black
   letter-spacing: 0.04rem
+
+  &.no__scroll
+    position: fixed !important
+    overflow: hidden !important
+    width: 100% !important
+    height: 100% !important
