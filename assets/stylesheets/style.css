@@ -358,10 +358,20 @@ body {
 
 html {
   font-size: 16px; }
+  html.no__scroll {
+    overflow-y: scroll !important;
+    overflow: hidden !important;
+    height: 100% !important;
+    margin-top: 0 !important; }
 
 body {
   color: black;
   letter-spacing: 0.04rem; }
+  body.no__scroll {
+    position: fixed !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    height: 100% !important; }
 
 /* loading option */
 .animsition-loading,
@@ -496,7 +506,7 @@ body {
   #main-header-nav-container.open__mobile__navigation {
     opacity: 1;
     visibility: visible;
-    padding: 0 15%; }
+    padding: 0; }
   #main-header-nav-container .outer-close {
     position: absolute;
     right: 0;
