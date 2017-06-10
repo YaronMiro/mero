@@ -175,12 +175,14 @@ gulp.task("html", ["styles"], function() {
     .pipe(jsFilter)
     .pipe($.uglify({preserveComments: "some"}))
     .pipe(jsFilter.restore())
+
     // Start cache busting the files
-    // .pipe($.revAll({
-    //   ignore: [".eot", ".svg", ".ttf", ".woff", ".html"]
-    // }))
+    .pipe($.revAll({
+      ignore: [".eot", ".ttf", ".woff", ".html"]
+    }))
     // Replace the asset names with their cache busted names
-    // .pipe($.revReplace())
+    .pipe($.revReplace())
+
     // Send the output to the correct folder
     .pipe(gulp.dest("site"))
     .pipe($.size({
