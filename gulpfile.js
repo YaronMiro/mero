@@ -297,7 +297,7 @@ gulp.task("publish-local", ["build-local"], function() {
 
 gulp.task('svgstore', function() {
   return gulp
-    .src('src/images/elements/*.svg')
+    .src('src/images/optimized/svg/*.svg')
     .pipe(svgmin(function(file) {
       return {
         plugins: [{
