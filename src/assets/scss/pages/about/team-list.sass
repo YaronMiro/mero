@@ -10,7 +10,7 @@
     margin: 10rem 0 1rem
 
   +respond-at($breakpoint-L)
-    margin: 0
+    margin: 0 0 0 1rem
 
   &.team__list--last
     +respond-at($breakpoint-L)
@@ -50,6 +50,10 @@
     padding: 1rem
     margin-right: 1.5rem
 
+  +respond-at($breakpoint-L)
+    padding: 0
+    background: transparent
+
 
 .team__list__item__img__container
   overflow: hidden
@@ -61,11 +65,9 @@
     width: 7rem
 
   +respond-at($breakpoint-S)
-    width: 9rem
+    width: 8.5rem
 
   +respond-at($breakpoint-L)
-    margin-top: calc(50% - 7.5rem)
-    width: 8.5rem
 
 .team__list__item__img
   display: block

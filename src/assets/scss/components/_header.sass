@@ -1,24 +1,19 @@
 .main__header
+  display: flex
+  flex-direction: column-reverse
   text-align: center
 
   +respond-at($breakpoint-L)
-    display: flex
-    flex-direction: row-reverse
-    justify-content: space-between
+    position: relative
+    z-index: 999
+    flex-direction: row
     align-items: center
-    border-bottom: 0
+    margin-top: 1rem
 
 .main__header__menu
-  padding-bottom: .5rem
-  border-bottom: 1px solid $gray-lighter
-
-  +respond-at($breakpoint-M)
-    border-bottom: 0
-
   +respond-at($breakpoint-L)
-    padding-bottom: 0
-    padding-right: 2rem
-    width: 50%
+    margin-top: .6rem
+    margin-left: 8rem
 
 .main__header__menu__button
   +reset-button-style()
@@ -162,7 +157,7 @@
   .main__header__menu__list
     +reset-list-style()
     font:
-      size: 1rem
+      size: 1.1rem
       weight: $weight-regular
 
   .menu__list__item
