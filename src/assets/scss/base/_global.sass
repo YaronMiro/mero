@@ -16,3 +16,23 @@ body
     overflow: hidden !important
     width: 100% !important
     height: 100% !important
+
+
+.divider
+  +divider(1px, $gray-lighter)
+
+.divider__wrapper
+  position: relative
+  margin: 3rem 0 3.2rem
+
+  +respond-at($breakpoint-S)
+    margin: 4rem 0 5rem
+
+  +respond-at($breakpoint-L)
+    padding: 0 5rem
+
+  &.divider__wrapper--angeled-one
+    transform: rotate(-3deg)
+
+  &.divider__wrapper--angeled-two
+    transform: rotate(3deg)

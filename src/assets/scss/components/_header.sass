@@ -135,11 +135,9 @@
         text-transform: uppercase
 
         &.menu__list__item--active
-          color: $gold
 
           .menu__item__link
-            &:before
-              visibility: hidden
+            opacity: 1
 
         .menu__item__link
           position: relative
@@ -149,10 +147,10 @@
           padding: 10% 5%
           cursor: pointer
           border-bottom: 1px solid $gray-lighter
+          opacity: .4
 
           &:hover
-            color: $gold
-            transition: color 0.3s ease
+            opacity: 1
 
 
 .main__header__nav--full
@@ -164,7 +162,7 @@
   .main__header__menu__list
     +reset-list-style()
     font:
-      size: 1.2rem
+      size: 1rem
       weight: $weight-regular
 
   .menu__list__item
@@ -175,51 +173,20 @@
       margin-left: 1.85rem
 
     &.menu__list__item--active
-      position: relative
-      &:before
-        content: ""
-        position: absolute
-        width: 100%
-        height: .05rem
-        bottom: -.75rem
-        left: 0
-        background: $gold
 
       .menu__item__link
-        &:hover
-          opacity: 1
-
-          &:before
-            visibility: hidden
+        opacity: 1
 
     .menu__item__link
-      position: relative
       display: block
       color: inherit
       text-decoration: none
       cursor: pointer
-      transition: all 0.5s ease
-      opacity: .8
-
-      &:before
-        content: ""
-        position: absolute
-        width: 100%
-        height: .05rem
-        bottom: -.75rem
-        left: 0
-        background: $gold
-        visibility: hidden
-        transform: scaleX(0)
-        transition: all 0.3s ease-in-out 0s
+      transition: all .15s ease
+      opacity: .4
 
       &:hover
         opacity: 1
-        transform: scale(1.0)
-
-        &:before
-          visibility: visible
-          transform: scaleX(1)
 
 .logo
   display: block
@@ -233,7 +200,7 @@
     max-width: 55%
 
   +respond-at($breakpoint-L)
-    max-width: 27rem
+    max-width: 14rem
     margin: 0
 
   .logo__img

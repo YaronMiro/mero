@@ -1,0 +1,113 @@
+.team__list
+  list-style: none
+  margin: 0
+  padding: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  +respond-at($breakpoint-M)
+    margin: 10rem 0 1rem
+
+  +respond-at($breakpoint-L)
+    margin: 0
+
+  &.team__list--last
+    +respond-at($breakpoint-L)
+      margin-top: 5rem
+
+.team__list__item
+  position: relative
+  display: flex
+  flex-direction: column
+  margin: 0 10%
+
+  +respond-at(420px)
+    margin: 0 20%
+
+  +respond-at($breakpoint-M)
+    flex-direction: row
+    align-items: center
+    margin: 0 10% 3rem
+
+  +respond-at($breakpoint-L)
+    margin: 0
+
+  &+.team__list__item
+    margin-top: 4rem
+
+.team__list__item__header
+  padding: 1rem 0
+  background-color: $black
+  background-image: url('/images/optimized/founder-bg.jpg')
+  +retina('/images/optimized/founder-bg.jpg', 2, 100% 100%)
+  +retina('/images/optimized/founder-bg.jpg', 3, 100% 100%)
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  border-radius: 3px
+
+  +respond-at($breakpoint-M)
+    // flex-shrink: 0
+
+
+.team__list__item__img__container
+  overflow: hidden
+  margin: 0 auto
+  width: 6rem
+  border-radius: 3px
+
+  +respond-at(500px)
+    width: 7rem
+
+  +respond-at($breakpoint-S)
+    width: 9rem
+
+  +respond-at($breakpoint-M)
+    margin-top: 1.5rem
+
+  +respond-at($breakpoint-L)
+    margin-top: calc(50% - 7.5rem)
+    width: 8.5rem
+
+.team__list__item__img
+  display: block
+  max-width: 100%
+  height: auto
+
+.team__list__item__info
+  font-size: 1rem
+  line-height: 1.5rem
+
+  +respond-at(420px)
+    font-size: 1.2rem
+
+  +respond-at($breakpoint-S)
+    font-size: 1.3rem
+
+  +respond-at($breakpoint-M)
+    margin-top: 0
+
+  +respond-at($breakpoint-L)
+    margin-top: 0
+    padding-right: 3rem
+    font-size: 1.2rem
+
+.team__list__item__title
+  text-transform: uppercase
+  margin: .8em 0 .58em
+  font-size: 1em
+  font-weight: $weight-semi-bold
+
+  +respond-at($breakpoint-M)
+    margin-top: 0
+
+.team__list__item__attributes
+  +reset-list-style()
+
+  .attributes__item
+
+    &+.attributes__item
+      margin-top: .4em
+
+.team__list__item__description
+  margin-bottom: 0
