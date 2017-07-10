@@ -6,14 +6,24 @@
   +respond-at($breakpoint-L)
     position: relative
     z-index: 999
+    margin-bottom: 3rem
+    padding: .75rem 3rem 2rem
+    border-bottom: .1rem solid $gray-lighter
     flex-direction: row
     align-items: center
-    margin-top: 1rem
+
 
 .main__header__menu
+  padding-bottom: 1rem
+  border-bottom: 1px solid $gray-lighter
+
+  +respond-at($breakpoint-M)
+    padding-bottom: 0
+    border-bottom: 0
+
   +respond-at($breakpoint-L)
     margin-top: .6rem
-    margin-left: 8rem
+    margin-left: 25rem
 
 .main__header__menu__button
   +reset-button-style()
