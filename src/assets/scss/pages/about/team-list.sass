@@ -6,12 +6,11 @@
   flex-direction: column
   align-items: center
 
-  +respond-at($breakpoint-M)
-    margin: 0 0 1rem
-
   &.team__list--last
     +respond-at($breakpoint-L)
-      margin-top: 5rem
+      border-top: 1px solid $gray-lighter
+      padding-top: 3rem
+      margin-top: 3rem
 
 .team__list__item
   position: relative

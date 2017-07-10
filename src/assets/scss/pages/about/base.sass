@@ -7,13 +7,18 @@
     margin-top: 4.4rem
 
   +respond-at($breakpoint-L)
-    flex-direction: row-reverse
+    flex-direction: row
     justify-content: space-between
     align-items: center
     margin-top: 0
 
 .last
-  .divider
+  +respond-at($breakpoint-L)
+    border-left: 1px solid $gray-lighter
+    padding-left: 3rem
+    margin-left: 3rem
+
+  .divider__wrapper
     +respond-at($breakpoint-L)
       display: none
 
@@ -21,8 +26,7 @@
   text-align: center
 
   +respond-at($breakpoint-L)
-    width: 50rem
-    margin-right: -3rem
+    width: 42rem
 
   .collage__img
     max-width: 100%
