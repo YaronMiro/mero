@@ -4,10 +4,6 @@
   border-top: .1rem solid $gray-lighter
 
   .main__footer__information
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
     padding: .75rem 0 0
 
     h1
@@ -16,9 +12,23 @@
         size: 1.85rem
         weight: $weight-regular
 
-    .main__footer__contact
+    .main__footer__contact__list
+      +reset-list-style()
+
+    .main__footer__contact__list__item
+      display: inline-block
       margin: 0
       font-size: 1.3rem
+
+      &+.main__footer__contact__list__item
+        border-left: 1px solid $gray-lighter
+        padding-left: 2rem
+        margin-left: 2rem
+
+      a
+        color: inherit
+        text-decoration: none
+
 
     .main__footer__contact__email
       padding-bottom: .1rem
