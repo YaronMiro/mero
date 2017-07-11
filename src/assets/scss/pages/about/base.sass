@@ -1,270 +1,233 @@
-.content
-  display: flex
-  flex-direction: column
-  margin-top: 2.5rem
+.about__page
+  .content
+    display: flex
+    flex-direction: column
+    margin-top: 2.5rem
 
-  +respond-at($breakpoint-S)
-    margin-top: 4.4rem
+    +respond-at($breakpoint-S)
+      margin-top: 4.4rem
 
-  +respond-at($breakpoint-L)
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
-    margin-top: 0
-
-.last
-  +respond-at($breakpoint-L)
-    border-left: 1px solid $gray-lighter
-    padding-left: 3rem
-    margin-left: 3rem
-
-  .divider__wrapper
     +respond-at($breakpoint-L)
-      display: none
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      margin-top: 0
 
-.collage
-  text-align: center
+  .last
+    +respond-at($breakpoint-L)
+      border-left: 1px solid $gray-lighter
+      padding-left: 3rem
+      margin-left: 3rem
 
-  +respond-at($breakpoint-L)
-    width: 42rem
+    .divider__wrapper
+      +respond-at($breakpoint-L)
+        display: none
 
-  .collage__img
-    max-width: 100%
-    height: auto
-
-  .collage__description
-    margin: 1.5rem auto 0
-    padding: 0 10%
+  .info__block
+    text-align: center
     font-size: 1rem
     line-height: 1.5rem
 
     +respond-at(420px)
-      padding: 0 20%
-      font-size: 1.2rem
+      padding-right: 1.5rem
+      padding-left: 1.5rem
 
     +respond-at($breakpoint-S)
-      padding: 0 16%
-      max-width: none
-      font-size: 1.5rem
-      line-height: 2.2rem
+      padding-right: 2.5rem
+      padding-left: 2.5rem
 
     +respond-at($breakpoint-M)
-      padding: 0 27%
-      max-width: none
-      font-size: 1.7rem
-      line-height: 2.3rem
+
 
     +respond-at($breakpoint-L)
-      display: none
+      margin: 0 auto
+      padding: 2.5rem 0
+      max-width: 50rem
 
-    strong
-      font-weight: $weight-semi-bold
-
-.info__block
-  text-align: center
-  font-size: 1rem
-  line-height: 1.5rem
-
-  +respond-at(420px)
-    padding-right: 1.5rem
-    padding-left: 1.5rem
-
-  +respond-at($breakpoint-S)
-    padding-right: 2.5rem
-    padding-left: 2.5rem
-
-  +respond-at($breakpoint-M)
-
-
-  +respond-at($breakpoint-L)
-    margin: 0 auto
-    padding: 2.5rem 0
-    max-width: 50rem
-
-
-  .title
-    margin: 0
-    font:
-      family: $anton
-      weight: normal
-      size: 2em
-    line-height: 1.2em
-
-    +respond-at(520px)
-      font-size: 3em
-
-    +respond-at($breakpoint-S)
-      font-size: 4.5em
-
-  .sub__title
-    margin: 0
-    color: $gold
-    font-weight: $weight-semi-bold
-
-    +respond-at(520px)
-      font-size: 1.2em
-
-    +respond-at($breakpoint-S)
-      line-height: 1.5em
-
-  .description
-    margin: 1rem 0 0
-    font-size: 1em
-
-    +respond-at($breakpoint-S)
-      font-size: 1.3em
-      line-height: 1.5em
-
-    +respond-at($breakpoint-L)
-      font-size: 1.25em
-
-
-  &.info__block--respect
-    +respond-at($breakpoint-S)
-      margin-bottom: 11.5rem
-
-    +respond-at($breakpoint-M)
-      max-width: none
-      margin-bottom: 0
-
-    +respond-at($breakpoint-L)
-      margin: -2rem 0 6rem
 
     .title
-      +respond-at($breakpoint-M)
-        margin: 0 4.5rem 4.5rem 0
-        text-align: left
+      margin: 0
+      font:
+        family: $anton
+        weight: normal
+        size: 2em
+      line-height: 1.2em
 
-      +respond-at($breakpoint-L)
-        margin-top: 1.5rem
-        margin-left: 6.5rem
+      +respond-at(520px)
+        font-size: 3em
 
-
-  &.info__block--core
-    +respond-at($breakpoint-M)
-      display: flex
-      flex-direction: row
-      align-items: center
-      max-width:  70rem
-      text-align: left
-
-    .title
-      text-transform: uppercase
-      +respond-at($breakpoint-M)
-        margin: 0 2rem 0 0
-        transform: rotate(-10deg)
+      +respond-at($breakpoint-S)
+        font-size: 4.5em
 
     .sub__title
-      display: block
-      margin-bottom: 1rem
+      margin: 0
+      color: $gold
+      font-weight: $weight-semi-bold
 
       +respond-at(520px)
         font-size: 1.2em
 
       +respond-at($breakpoint-S)
-        font-size: 1em
         line-height: 1.5em
 
-      +respond-at($breakpoint-M)
-        margin: 0
-
     .description
-      margin-top: 0
-      +respond-at($breakpoint-M)
-        margin: 0
+      margin: 1rem 0 0
+      font-size: 1em
 
-
-  &.info__block--design
-    +respond-at($breakpoint-M)
-      max-width: 70rem
-      text-align: left
-
-    .title
       +respond-at($breakpoint-S)
-        font-size: 4.2rem
+        font-size: 1.3em
+        line-height: 1.5em
 
-    .sub__title
-      +respond-at($breakpoint-M)
-        margin-left: 0
-
-
-  &.info__block--quality
-    +respond-at($breakpoint-M)
-      max-width: 70rem
+      +respond-at($breakpoint-L)
+        font-size: 1.25em
 
 
-    .title
+    &.info__block--respect
       +respond-at($breakpoint-S)
-        font-size: 3.75rem
+        margin-bottom: 11.5rem
 
-      small
+      +respond-at($breakpoint-M)
+        max-width: none
+        margin-bottom: 0
+
+      +respond-at($breakpoint-L)
+        margin: -2rem 0 6rem
+
+      .title
+        +respond-at($breakpoint-M)
+          margin: 0 4.5rem 4.5rem 0
+          text-align: left
+
+        +respond-at($breakpoint-L)
+          margin-top: 1.5rem
+          margin-left: 6.5rem
+
+
+    &.info__block--core
+      +respond-at($breakpoint-M)
+        display: flex
+        flex-direction: row
+        align-items: center
+        max-width:  70rem
+        text-align: left
+
+      .title
+        text-transform: uppercase
+        +respond-at($breakpoint-M)
+          margin: 0 2rem 0 0
+          transform: rotate(-10deg)
+
+      .sub__title
         display: block
+        margin-bottom: 1rem
+
+        +respond-at(520px)
+          font-size: 1.2em
+
         +respond-at($breakpoint-S)
-          display: inline-block
-          font-size: 2.45rem
+          font-size: 1em
+          line-height: 1.5em
 
-  &.info__block--clientele
-    +respond-at($breakpoint-M)
-      display: flex
-      flex-direction: row
-      align-items: center
-      max-width:  70rem
-      padding-bottom: 2.5rem
-      text-align: left
+        +respond-at($breakpoint-M)
+          margin: 0
 
-    .title
-      display: inline-block
-      padding: .5em .5em .2em
-      border: 2px solid $gold
+      .description
+        margin-top: 0
+        +respond-at($breakpoint-M)
+          margin: 0
 
+
+    &.info__block--design
       +respond-at($breakpoint-M)
-        display: block
-        margin-right: 1.5rem
+        max-width: 70rem
+        text-align: left
 
-      +respond-at($breakpoint-S)
-        font-size: 3.2rem
+      .title
+        +respond-at($breakpoint-S)
+          font-size: 4.2rem
 
-    .description
+      .sub__title
+        +respond-at($breakpoint-M)
+          margin-left: 0
+
+
+    &.info__block--quality
       +respond-at($breakpoint-M)
-        max-width: 32rem
+        max-width: 70rem
 
-.respect__infograph
-  width: 100%
-  height: auto
-  display: none
 
-  +respond-at($breakpoint-M)
-    display: block
+      .title
+        +respond-at($breakpoint-S)
+          font-size: 3.75rem
 
-  +respond-at($breakpoint-L)
-    margin: 0 auto
-    width: 57rem
+        small
+          display: block
+          +respond-at($breakpoint-S)
+            display: inline-block
+            font-size: 2.45rem
 
-.respect__list
-  +reset-list-style()
-  max-width: 28.5rem
-  margin: 2.5rem auto
+    &.info__block--clientele
+      +respond-at($breakpoint-M)
+        display: flex
+        flex-direction: row
+        align-items: center
+        max-width:  70rem
+        padding-bottom: 2.5rem
+        text-align: left
 
-  +respond-at($breakpoint-M)
+      .title
+        display: inline-block
+        padding: .5em .5em .2em
+        border: 2px solid $gold
+
+        +respond-at($breakpoint-M)
+          display: block
+          margin-right: 1.5rem
+
+        +respond-at($breakpoint-S)
+          font-size: 3.2rem
+
+      .description
+        +respond-at($breakpoint-M)
+          max-width: 32rem
+
+  .respect__infograph
+    width: 100%
+    height: auto
     display: none
 
-  .respect__list__item
-    position: relative
-    padding-bottom: 0
-    font-size: 1rem
-    line-height: 1.5rem
-
-    +respond-at($breakpoint-S)
-      font-size: 1.3em
-
-    &+.respect__list__item
-      margin-top: 2rem
-
-    .name
-      display: inline-block
-      padding: 0 2rem
-
-    .respect__list__item__img
-      width: 73%
-      margin: 0 auto
+    +respond-at($breakpoint-M)
       display: block
+
+    +respond-at($breakpoint-L)
+      margin: 0 auto
+      width: 57rem
+
+  .respect__list
+    +reset-list-style()
+    max-width: 28.5rem
+    margin: 2.5rem auto
+
+    +respond-at($breakpoint-M)
+      display: none
+
+    .respect__list__item
+      position: relative
+      padding-bottom: 0
+      font-size: 1rem
+      line-height: 1.5rem
+
+      +respond-at($breakpoint-S)
+        font-size: 1.3em
+
+      &+.respect__list__item
+        margin-top: 2rem
+
+      .name
+        display: inline-block
+        padding: 0 2rem
+
+      .respect__list__item__img
+        width: 73%
+        margin: 0 auto
+        display: block

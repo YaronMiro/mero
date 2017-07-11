@@ -1,0 +1,38 @@
+.about__page
+  .collage
+    text-align: center
+
+    +respond-at($breakpoint-L)
+      width: 42rem
+
+    .collage__img
+      max-width: 100%
+      height: auto
+
+    .collage__description
+      margin: 1.5rem auto 0
+      padding: 0 10%
+      font-size: 1rem
+      line-height: 1.5rem
+
+      +respond-at(420px)
+        padding: 0 20%
+        font-size: 1.2rem
+
+      +respond-at($breakpoint-S)
+        padding: 0 16%
+        max-width: none
+        font-size: 1.5rem
+        line-height: 2.2rem
+
+      +respond-at($breakpoint-M)
+        padding: 0 27%
+        max-width: none
+        font-size: 1.7rem
+        line-height: 2.3rem
+
+      +respond-at($breakpoint-L)
+        display: none
+
+      strong
+        font-weight: $weight-semi-bold
