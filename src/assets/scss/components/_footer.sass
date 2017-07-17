@@ -1,6 +1,8 @@
 #main_footer
-  margin: 10rem 0 1.75rem
-  padding: .5rem 3rem 0
+  margin: 4rem 0 1rem
+  // margin: 10rem 0 1.75rem
+  padding: .5rem 1rem 0
+  // padding: .5rem 3rem 0
   border-top: 1px solid $gray-lighter
 
   .main__footer__information
@@ -11,14 +13,31 @@
       text-align: center
 
     .main__footer__contact__list__item
-      display: inline-block
-      margin: 0
+      display: block
       font-size: 1rem
 
+      +respond-at($breakpoint-S)
+        text-align: left
+        display: inline-block
+
+      +respond-at($breakpoint-M)
+        text-align: center
+
       &+.main__footer__contact__list__item
-        border-left: 1px solid $gray-lighter
-        padding-left: 2rem
-        margin-left: 2rem
+        margin-top: 1rem
+
+        +respond-at($breakpoint-S)
+          border-left: 1px solid $gray-lighter
+          padding-left: 1rem
+          margin-left: 1rem
+
+      .main__footer__contact__list__item__title
+        display: block
+        margin-bottom: .25rem
+        font-weight: $weight-regular
+
+        +respond-at($breakpoint-M)
+          display: inline-block
 
       a
         color: inherit
