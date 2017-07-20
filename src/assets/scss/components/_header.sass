@@ -27,14 +27,11 @@
 
 .main__header__menu__button
   +reset-button-style()
-  display: flex
   margin: 0 auto
   padding: 0 5%
   width: 100%
-  flex-direction: row
-  align-items: center
-  justify-content: space-between
   font-size: 2.7rem
+  height: 2rem
 
   +respond-at($breakpoint-S)
     font-size: 3.7rem
@@ -43,12 +40,13 @@
     display: none
 
   .button__icon
+    float: right
     width: .7em
-    display:block
-    margin-right: 0.4rem
+    height: 100%
 
   .button__text
-    display: block
+    float: left
+    line-height: 2rem
     font:
       size: .7em
       weight: $weight-regular
