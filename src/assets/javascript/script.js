@@ -45,8 +45,9 @@ function initFloatLabel(className) {
 function toggleNavigationDisplay() {
   $('.main__header__menu__button').click(function() {
     $('#main-header-nav-container').toggleClass('open__mobile__navigation');
-    $('html').toggleClass('no__scroll');
-    $('body').toggleClass('no__scroll');
+    });
+  $('#main-header-nav-container .menu__item__link').click(function() {
+    $('#main-header-nav-container').toggleClass('open__mobile__navigation');
     });
 }
 

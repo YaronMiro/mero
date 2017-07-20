@@ -9,6 +9,7 @@
     margin-bottom: 2rem
     padding: 0 3rem 2rem
     border-bottom: 1px solid $gray-lighter
+    +Shadow-bottom()
     flex-direction: row
     align-items: center
 
@@ -16,6 +17,8 @@
 .main__header__menu
   padding-bottom: 1rem
   border-bottom: 1px solid $gray-lighter
+  // +Shadow-bottom()
+
 
   +respond-at($breakpoint-M)
     padding-bottom: 0
@@ -150,6 +153,7 @@
           padding: 10% 5%
           cursor: pointer
           border-bottom: 1px solid $gray-lighter
+          transition: all .15s ease
           opacity: .4
 
           &:hover
