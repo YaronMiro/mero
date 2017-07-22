@@ -76,7 +76,7 @@
   @if $border == with-border
     border-#{$position}: 1px solid rgba(217, 217, 217, .4)
 
-  box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
+  box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.2)
 
   // Fix to hide shadow on the sides of the block
   position: relative
@@ -87,9 +87,23 @@
     position: absolute
     top: 0
     bottom: 0
-    right: -1.5rem
-    width: 3rem
+    right: 0
+    width: .5rem
     background: white
+
+    +respond-at($breakpoint-S)
+      margin-left: -8%
+      margin-right: -8%
+      right: -1.5rem
+
   &::before,
-    left: -1.5rem
+    left: 0
     right: auto
+
+    +respond-at($breakpoint-S)
+      left: -1.5rem
+
+
+  +respond-at($breakpoint-M)
+    margin-left: 8%
+    margin-right: 8%
