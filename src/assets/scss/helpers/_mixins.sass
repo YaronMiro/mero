@@ -56,7 +56,6 @@
   border-#{$position}: 0
 
 =shadow($position, $border: null)
-  position: relative
   // Declare variable (default value)
   $shadow: 0 0
   $pesudo: after
@@ -72,6 +71,22 @@
     $shadow: -2rem 0
 
   @if $border == with-border
-    // border-#{$position}: 1px solid rgba(217, 217, 217, .4)
+    border-#{$position}: 1px solid rgba(217, 217, 217, .4)
 
   box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
+
+  // Fix to hide shadow on the sides of the block
+  position: relative
+  &::after,
+  &::before
+    content: ""
+    z-index: 1
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    width: .65rem
+    background: white
+  &::before,
+    left: 0
+    right: auto

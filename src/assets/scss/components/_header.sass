@@ -8,7 +8,7 @@
     z-index: 999
     margin-bottom: 2rem
     padding: 0 3rem 2rem
-    +shadow(bottom, with-border)
+    +shadow(bottom)
     flex-direction: row
     align-items: center
 
@@ -16,8 +16,7 @@
 .main__header__menu
   padding: 8rem 7% 1rem
   margin-top: -6.5rem
-  padding-bottom:
-  +shadow(bottom, with-border)
+  +shadow(bottom)
 
   +respond-at($breakpoint-S)
     margin-top: -5rem
@@ -51,7 +50,7 @@
     line-height: 2rem
     font:
       size: .7em
-      weight: $weight-regular
+      // weight: $weight-regular
     text-transform: uppercase
 
 #main-header-nav-container
@@ -196,11 +195,11 @@
 
 .logo
   display: block
-  margin: 3rem auto 0
-  max-width: 60%
+  margin: 2rem auto 0
+  max-width: 55%
 
   +respond-at($breakpoint-S)
-    margin-top: 4rem
+    margin-top: 3rem
 
   +respond-at($breakpoint-M)
     max-width: 55%
