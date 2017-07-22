@@ -16,25 +16,23 @@
       margin-top: 0
 
     .first
-      margin: 0 -2.5rem
-      padding: 0 2.5rem 2.5rem
-      // padding-bottom: 2.5rem
+      padding-bottom: 2.7rem
       +shadow(bottom)
 
       +respond-at($breakpoint-M)
-        padding-bottom: 0
-        +remove-shadow(bottom)
 
     .last
+      margin-top: 2.7rem
     +respond-at($breakpoint-L)
       border-left: 1px solid $gray-lighter
       +shadow(left)
       padding-left: 3rem
       margin-left: 3rem
 
-    .divider__wrapper
+    .title
+      text-align: center
+
       +respond-at($breakpoint-L)
-        display: none
 
   .respect__infograph
     width: 100%

@@ -8,21 +8,20 @@
     z-index: 999
     margin-bottom: 2rem
     padding: 0 3rem 2rem
-    border-bottom: 1px solid $gray-lighter
-    +shadow(bottom)
+    +shadow(bottom, with-border)
     flex-direction: row
     align-items: center
 
 
 .main__header__menu
-  padding-bottom: 1rem
-  border-bottom: 1px solid $gray-lighter
-  // +shadow(bottom)
+  padding: 8rem 7% 1rem
+  margin-top: -6.5rem
+  padding-bottom:
+  +shadow(bottom, with-border)
 
-
-  +respond-at($breakpoint-M)
-    padding-bottom: 0
-    border-bottom: 0
+  +respond-at($breakpoint-S)
+    margin-top: -5rem
+    padding-bottom: 1.5rem
 
   +respond-at($breakpoint-L)
     margin-top: .6rem
@@ -197,8 +196,8 @@
 
 .logo
   display: block
-  margin: 2.5rem auto 0
-  max-width: 75%
+  margin: 3rem auto 0
+  max-width: 60%
 
   +respond-at($breakpoint-S)
     margin-top: 4rem

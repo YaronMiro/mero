@@ -1,6 +1,7 @@
+
 .info__block
-  padding-top: 3rem
-  padding-bottom: 3rem
+  margin-top: 3rem
+  padding: 0 10% 3rem
   text-align: center
   font-size: 1rem
   line-height: 1.5rem
@@ -24,18 +25,7 @@
     padding: 6rem 8.5rem
 
   .title
-    margin: 0
-    font:
-      family: $anton
-      weight: normal
-      size: 2.5em
-    line-height: 1.2em
-
-    +respond-at(520px)
-      font-size: 3em
-
-    +respond-at($breakpoint-S)
-      font-size: 4.5em
+    +title($font-anton)
 
   .sub__title
     margin: 0
@@ -61,7 +51,6 @@
 
 
   &.info__block--respect
-    padding-top: 2rem
 
     +respond-at($breakpoint-M)
       padding-right: 2rem
