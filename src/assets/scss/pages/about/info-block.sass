@@ -6,15 +6,11 @@
   font-size: 1rem
   line-height: 1.5rem
   +shadow(bottom)
-  // border-bottom: 1px solid $gray-lighter
 
-
-  +respond-at(420px)
-    padding-right: 1.5rem
-    padding-left: 1.5rem
 
   +respond-at($breakpoint-S)
-    padding: 4rem 2.5rem
+    margin-top: 4rem
+    padding-bottom: 4rem
 
   +respond-at($breakpoint-M)
     padding-right: 2rem
@@ -56,8 +52,6 @@
       padding-right: 2rem
       padding-left: 2rem
 
-    +respond-at($breakpoint-L)
-      padding-top: 2rem
 
     .title
       +respond-at($breakpoint-M)
@@ -78,6 +72,7 @@
 
     .title
       text-transform: uppercase
+
       +respond-at($breakpoint-M)
         margin: 0 2rem 0 0
         transform: rotate(-10deg)
@@ -98,6 +93,7 @@
 
     .description
       margin-top: 0
+
       +respond-at($breakpoint-M)
         margin: 0
 
@@ -128,6 +124,7 @@
           font-size: 2.45rem
 
   &.info__block--clientele
+
     +respond-at($breakpoint-M)
       display: flex
       flex-direction: row

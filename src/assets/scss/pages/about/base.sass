@@ -19,10 +19,15 @@
       padding-bottom: 2.7rem
       +shadow(bottom)
 
-      +respond-at($breakpoint-M)
+      +respond-at($breakpoint-S)
+        padding-bottom: 4rem
 
     .last
       margin-top: 2.7rem
+
+      +respond-at($breakpoint-S)
+        margin-top: 3.5rem
+
     +respond-at($breakpoint-L)
       border-left: 1px solid $gray-lighter
       +shadow(left)

@@ -54,6 +54,9 @@
 =remove-shadow($position)
   box-shadow: none
   border-#{$position}: 0
+  &::after,
+  &::before
+    display: none
 
 =shadow($position, $border: null)
   // Declare variable (default value)
@@ -79,14 +82,14 @@
   position: relative
   &::after,
   &::before
-    content: ""
     z-index: 1
+    content: ""
     position: absolute
     top: 0
     bottom: 0
-    right: 0
-    width: .65rem
+    right: -1.5rem
+    width: 3rem
     background: white
   &::before,
-    left: 0
+    left: -1.5rem
     right: auto

@@ -9,12 +9,18 @@
     margin-top: -10.5rem
     +shadow(bottom)
 
+    +respond-at($breakpoint-S)
+      margin-top: -9rem
+
   .main__footer__list
     +reset-list-style()
     margin-top: 2rem
     padding-left: 20%
     padding-right: 20%
     text-align: center
+
+    +respond-at($breakpoint-S)
+      margin-top: 4rem
 
     +respond-at($breakpoint-M)
       display: inline-block
