@@ -51,12 +51,21 @@
         height: auto
         border-bottom: 0
 
+        &:nth-child(1),
+        &:nth-child(2)
+          display: none
+
       &+.main__footer__list__item
 
         +respond-at($breakpoint-L)
-          border-left: 1px solid $gray-lighter
-          padding-left: 1rem
-          margin-left: 1rem
+          border-right: 1px solid $gray-lighter
+          padding-right: 1rem
+          margin-right: 1rem
+
+          &:last-child
+            border-right: 0
+            padding-right: 0
+            margin-right: 0
 
       .main__footer__list__item__wrapper
         display: block
@@ -70,6 +79,7 @@
 
       &.main__footer__list__item__front__link:hover
         background: rgba($black, .02)
+
 
       .main__footer__list__item__title
         display: block
