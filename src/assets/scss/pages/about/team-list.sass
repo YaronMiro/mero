@@ -1,9 +1,12 @@
 .team__list__wrapper
   +respond-at($breakpoint-M)
-    margin: 0 8%
+    // margin: 0 8%
 
   .title
-    padding-left: 2rem
+    padding-left: 20%
+
+    +respond-at($breakpoint-M)
+      padding-left: 0
 
   .team__list
     list-style: none
@@ -31,7 +34,7 @@
       flex-direction: row
       align-items: center
       margin-top: 2rem
-      padding: 0 0 3rem
+      padding: 0 8% 3rem
 
     +respond-at($breakpoint-L)
       margin-bottom: 3rem
@@ -46,7 +49,8 @@
         padding-bottom: 4rem
 
       +respond-at($breakpoint-M)
-        margin: 3rem 8% 0
+        margin: 3rem 0 0
+        // margin: 3rem 8% 0
         padding-bottom: 3rem
 
   .team__list__item__header

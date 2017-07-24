@@ -76,34 +76,25 @@
   @if $border == with-border
     border-#{$position}: 1px solid rgba(217, 217, 217, .4)
 
-  box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.2)
+  box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
+  +respond-at($breakpoint-S)
+    // Fix to hide shadow on the sides of the block
+    position: relative
+    &::after,
+    &::before
+      z-index: 1
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      width: .75rem
+      background: $white
 
-  // Fix to hide shadow on the sides of the block
-  position: relative
-  &::after,
-  &::before
-    z-index: 1
-    content: ""
-    position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    width: .5rem
-    background: white
+      // margin-left: -.6rem
+      // margin-right: -.6rem
+      right: -.75rem
 
-    +respond-at($breakpoint-S)
-      width: .85rem
-      margin-left: -8%
-      margin-right: -8%
-      right: -1.5rem
-
-  &::before,
-    left: 0
-    right: auto
-
-    +respond-at($breakpoint-S)
-      left: -1.5rem
-
-  +respond-at($breakpoint-M)
-    margin-left: 8%
-    margin-right: 8%
+    &::before,
+      left: -.75rem
+      right: auto
