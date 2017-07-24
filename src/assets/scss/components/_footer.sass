@@ -1,6 +1,8 @@
 #main_footer
   margin: 4rem 0 1rem
 
+  +respond-at($breakpoint-S)
+
   +respond-at($breakpoint-M)
     text-align: center
 
@@ -9,60 +11,65 @@
     margin-top: -10.5rem
     +shadow(bottom)
 
-    +respond-at($breakpoint-S)
-      margin-top: -9rem
-
   .main__footer__list
     +reset-list-style()
     margin-top: 2rem
-    padding-left: 20%
-    padding-right: 20%
+    padding: 0 20%
     text-align: center
 
     +respond-at($breakpoint-S)
-      margin-top: 4rem
+      margin: 2rem 0
+      padding: 0 10%
 
     +respond-at($breakpoint-M)
       display: inline-block
+      margin-top: 4rem
+      padding: 0 15%
+
+
+    +respond-at($breakpoint-M)
+      display: inline-block
+      margin-top: 2rem
+      padding: 0
 
 
     .main__footer__list__item
       display: block
-      margin-top: 1.25rem
-      padding-bottom: 1.25rem
       border-bottom: 1px solid rgba($gray-lighter, 0.4)
       font-size: 1rem
 
-      +respond-at($breakpoint-M)
-        float: left
-        display: inline-block
-        padding: .75rem 0
-        height: 3.5rem
+      &:last-child,
+      &:nth-last-child(2)
         border-bottom: 0
 
+      +respond-at($breakpoint-S)
+        display: inline-block
+        width: 45%
+
       +respond-at($breakpoint-L)
+        width: auto
         height: auto
-        padding: 0
+        border-bottom: 0
 
       &+.main__footer__list__item
 
-        +respond-at($breakpoint-M)
+        +respond-at($breakpoint-L)
           border-left: 1px solid $gray-lighter
           padding-left: 1rem
           margin-left: 1rem
 
-      &.main__footer__list__item__front__link
+      .main__footer__list__item__wrapper
+        display: block
+        padding: 1.25rem 0
+        color: inherit
+        text-decoration: none
+
+        +respond-at($breakpoint-L)
+          padding: 0
 
 
-        .main__footer__front__page__logo
-          max-width: 20%
-          width: auto
-
-      &.main__footer__list__item__copyrights
-        border-left: 0
-        padding-left: 0
-        margin-left: 0
-
+      &.main__footer__list__item__front__link:hover
+        background: rgba($black, .02)
 
       .main__footer__list__item__title
         display: block
@@ -70,8 +77,3 @@
 
         +respond-at($breakpoint-L)
           display: inline-block
-
-
-      a
-        color: inherit
-        text-decoration: none
