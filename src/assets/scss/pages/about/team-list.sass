@@ -1,11 +1,13 @@
 .team__list__wrapper
-  +respond-at($breakpoint-M)
-    // margin: 0 8%
 
   .title
     padding-left: 20%
 
     +respond-at($breakpoint-M)
+      padding-left: 8%
+
+    +respond-at($breakpoint-L)
+      display: none
       padding-left: 0
 
   .team__list
@@ -19,6 +21,9 @@
 
     +respond-at($breakpoint-M)
       margin: 0
+
+    +respond-at($breakpoint-L)
+      +remove-shadow(bottom)
 
   .team__list__item
     position: relative
@@ -37,7 +42,10 @@
       padding: 0 8% 3rem
 
     +respond-at($breakpoint-L)
-      margin-bottom: 3rem
+      margin: 0 0 3rem
+      padding-left: 0
+      padding-right: 0
+
 
     &+.team__list__item
       margin-top: 3rem
@@ -50,8 +58,11 @@
 
       +respond-at($breakpoint-M)
         margin: 3rem 0 0
-        // margin: 3rem 8% 0
         padding-bottom: 3rem
+
+      +respond-at($breakpoint-L)
+        margin-top: 0
+        padding-bottom: 0
 
   .team__list__item__header
     padding: 1rem 0
@@ -79,6 +90,9 @@
     +respond-at($breakpoint-S)
       width: 8.5rem
 
+    +respond-at($breakpoint-S)
+      width: 8rem
+
   .team__list__item__img
     display: block
     max-width: 100%
@@ -96,6 +110,7 @@
 
     +respond-at($breakpoint-M)
       margin-top: 0
+      max-width: 28rem
 
     +respond-at($breakpoint-L)
       margin-top: 0
