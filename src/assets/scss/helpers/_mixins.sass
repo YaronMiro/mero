@@ -78,25 +78,21 @@
 
   box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
 
-  @if $border == bottom
+  @if $position == bottom
     +respond-at($breakpoint-S)
-    // Fix to hide shadow on the sides of the block
-    position: relative
-    &::after,
-    &::before
-      z-index: 1
-      content: ""
-      position: absolute
-      top: 0
-      bottom: 0
-      right: 0
-      width: .75rem
-      background: $white
+      // Fix to hide shadow on the sides of the block
+      position: relative
+      &::after,
+      &::before
+        z-index: 1
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        right: -.75rem
+        width: .75rem
+        background: $white
 
-      // margin-left: -.6rem
-      // margin-right: -.6rem
-      right: -.75rem
-
-    &::before,
-      left: -.75rem
-      right: auto
+      &::before,
+        left: -.75rem
+        right: auto

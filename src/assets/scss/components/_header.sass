@@ -14,27 +14,73 @@
 
 
 .main__header__menu
-  padding: 8rem 7% 1rem
+  padding: 8rem 0 1rem
   margin-top: -6.5rem
-  +shadow(bottom)
+  // Sticky
+  z-index: 1
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  padding-bottom: 2rem
+  height: 11rem
+  background: $white
+
 
   +respond-at($breakpoint-S)
     margin-top: -5rem
     padding-bottom: 1.5rem
+    // Non Sticky
+    position: static
+    top: auto
+    left: auto
+    right: auto
+    width: 100%
+    max-width: none
+    height: auto
+    margin-left: auto
+    margin-right: auto
+    z-index: inherit
+    background: transparent
+    border-bottom: 0
 
   +respond-at($breakpoint-M)
     padding-bottom: 1.75rem
+    // Non Sticky
+    width: auto
 
   +respond-at($breakpoint-L)
-    margin-top: .6rem
-    margin-left: 5rem
-    padding: 2rem 0 0
+    margin-top: 1rem
+    margin-left: 4.3rem
+    padding: 0
     +remove-shadow(bottom)
+
+
+&.open__main__header__menu
+  position: static
+
+.shadow-divder
+  z-index: -1
+  margin-top: -8rem
+  padding-top: 8.8rem
+  +shadow(bottom)
+
+  +respond-at($breakpoint-S)
+    margin-top: -7rem
+
+  +respond-at($breakpoint-M)
+    margin-top: -6.5rem
+
+  +respond-at($breakpoint-L)
+    +remove-shadow(bottom)
+    display: none
+
+
 
 .main__header__menu__button
   +reset-button-style()
   margin: 0 auto
-  padding: 0 5%
+  padding: 0 12%
   width: 100%
   font-size: 2.7rem
   height: 2rem
@@ -59,7 +105,7 @@
     text-transform: uppercase
 
 #main-header-nav-container
-  position: fixed
+  position: absolute
   width: 100%
   height: 100%
   top: 0
@@ -200,14 +246,13 @@
 
 .logo
   display: block
-  margin: 2rem auto 0
+  margin: 7rem auto 0
   max-width: 55%
 
   +respond-at($breakpoint-S)
     margin-top: 3rem
 
   +respond-at($breakpoint-M)
-    margin-top: 4rem
     max-width: 40%
 
   +respond-at($breakpoint-L)

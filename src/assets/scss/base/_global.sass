@@ -11,30 +11,11 @@ body
   color: $black
   letter-spacing: 0.04rem
 
-  &.no__scroll
-    position: fixed !important
-    overflow: hidden !important
-    width: 100% !important
-    height: 100% !important
-
 .title
   +title($font-anton)
 
-.divider
-  +divider(1px, $gray-lighter)
+.open__menu__hide__all
+  display: none
 
-.divider__wrapper
-  position: relative
-  margin: 3rem 0 3.2rem
-
-  +respond-at($breakpoint-S)
-    margin: 4rem 0 5rem
-
-  +respond-at($breakpoint-L)
-    padding: 0 5rem
-
-  &.divider__wrapper--angeled-one
-    // transform: rotate(-3deg)
-
-  &.divider__wrapper--angeled-two
-    // transform: rotate(3deg)
+  +respond-at($breakpoint-M)
+    display: block
