@@ -67,17 +67,19 @@
     $shadow: 0 -2rem
     $pesudo: before
 
-  @if $position == "bottom"
+  @if $position == bottom
     $shadow: 0 2rem
 
   @if $position == left
-    $shadow: -2.8rem 0
+    $shadow: -2rem 0
 
   @if $border == with-border
     border-#{$position}: 1px solid rgba(217, 217, 217, .4)
 
   box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
-  +respond-at($breakpoint-S)
+
+  @if $border == bottom
+    +respond-at($breakpoint-S)
     // Fix to hide shadow on the sides of the block
     position: relative
     &::after,
