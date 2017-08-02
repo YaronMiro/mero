@@ -1,0 +1,89 @@
+#main_footer
+  margin: 4rem 0 1rem
+
+  +respond-at($breakpoint-S)
+
+  +respond-at($breakpoint-M)
+    text-align: center
+
+  .shadow__divider
+    padding: 8rem 7% 1rem
+    margin-top: -10.5rem
+    +shadow(bottom)
+
+  .main__footer__list
+    +reset-list-style()
+    margin-top: 2rem
+    padding: 0 20%
+    text-align: center
+
+    +respond-at($breakpoint-S)
+      margin: 2rem 0
+      padding: 0 10%
+
+    +respond-at($breakpoint-M)
+      display: inline-block
+      margin-top: 4rem
+      padding: 0 15%
+
+
+    +respond-at($breakpoint-M)
+      display: inline-block
+      margin-top: 2rem
+      padding: 0
+
+
+    .main__footer__list__item
+      display: block
+      border-bottom: 1px solid rgba($gray-lighter, 0.4)
+      font-size: 1rem
+
+      &:last-child,
+      &:nth-last-child(2)
+        border-bottom: 0
+
+      +respond-at($breakpoint-S)
+        display: inline-block
+        width: 45%
+
+      +respond-at($breakpoint-L)
+        width: auto
+        height: auto
+        border-bottom: 0
+
+        &:nth-child(1),
+        &:nth-child(2)
+          display: none
+
+      &+.main__footer__list__item
+
+        +respond-at($breakpoint-L)
+          border-right: 1px solid $gray-lighter
+          padding-right: 1rem
+          margin-right: 1rem
+
+          &:last-child
+            border-right: 0
+            padding-right: 0
+            margin-right: 0
+
+      .main__footer__list__item__wrapper
+        display: block
+        padding: 1.25rem 0
+        color: inherit
+        text-decoration: none
+
+        +respond-at($breakpoint-L)
+          padding: 0
+
+
+      &.main__footer__list__item__front__link:hover
+        background: rgba($black, .02)
+
+
+      .main__footer__list__item__title
+        display: block
+        margin-bottom: .25rem
+
+        +respond-at($breakpoint-L)
+          display: inline-block

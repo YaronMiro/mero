@@ -1,0 +1,19 @@
+.container__main
+  position: relative
+  margin: 0 auto
+
+  +respond-at($breakpoint-S)
+    max-width: $container-S
+
+  +respond-at($breakpoint-M)
+    max-width: $container-M
+
+  +respond-at($breakpoint-L)
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+    max-width: $container-L
+
+  .container__main__content
+    +respond-at($breakpoint-L)
+      padding-left: 3rem
+      padding-right: 3rem

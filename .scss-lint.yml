@@ -1,0 +1,52 @@
+# Configuration scss-lint for Gizra.com.
+
+scss_files: "app/_scss/*.scss"
+
+linters:
+  ColorKeyword:
+    enabled: false
+
+  ColorVariable:
+    enabled: false
+
+  DuplicateProperty:
+    exclude:
+      - 'app/_scss/_homepage.scss'
+      - 'app/_scss/_mixins.scss'
+
+  HexLength:
+    enabled: false
+
+  HexNotation:
+    enabled: false
+
+  IdSelector:
+    enabled: false
+
+  ImportantRule:
+    enabled: false
+
+  LeadingZero:
+    enabled: false
+
+  NestingDepth:
+    max_depth: 6
+
+  PropertySortOrder:
+    enabled: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  VendorPrefix:
+    enabled: false
+
+  SelectorDepth:
+    max_depth: 5
+
+  Shorthand:
+    enabled: false
+
+  SelectorFormat:
+    exclude:
+      - 'app/_scss/_general.scss'

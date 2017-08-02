@@ -1,0 +1,158 @@
+.contact__us
+  margin: 3.5rem 10% 0
+  padding: 1.5rem
+  border-radius: 5px
+  border: 1px solid $gray-lighter
+
+  +respond-at(420px)
+    padding: 1.5rem
+
+  +respond-at($breakpoint-S)
+    padding: 2.5rem
+
+  +respond-at($breakpoint-M)
+    max-width: 43rem
+    margin-left: auto
+    margin-right: auto
+
+  +respond-at($breakpoint-L)
+    margin-top: 7rem
+    margin-bottom: 7rem
+    max-width: 58rem
+
+  .contact__us__title
+    +title($font-anton)
+
+    +respond-at($breakpoint-M)
+      text-align: left
+
+  .form__contact__fields__container
+    font-size: 1rem
+
+    +respond-at($breakpoint-M)
+      font-size: 1.15rem
+
+    .form__contact__field
+      min-height: 4.5rem
+      border-bottom: 1px solid $gray-lighter
+
+    .floatl__input.textarea
+      min-height: 10em
+      max-width: 100% !important
+
+    /* Custom style to overwrite the default float-label style. */
+    .floatl--focused
+      background-color: lighten($gold, 38%)
+
+    .floatl--error
+      background-color: lighten($error, 45%)
+
+      .floatl__label
+        color: $error
+
+    .floatl__label
+      padding: 0.5em 0 0
+
+    input.floatl__input,
+    textarea.floatl__input
+      color: inherit
+      height: auto
+      background-color: transparent
+      letter-spacing: inherit
+      font:
+        size: 1em
+        family: inherit
+
+    input.floatl__input
+
+
+
+    .floatl__label,
+    .floatl__input,
+    .floatl--active.floatl--multiline .floatl__label
+      background: transparent
+      background-color: transparent
+
+    .floatl__label
+      margin: 0 0 .7rem
+      font:
+        size: 1em
+        weight: $weight-light
+
+
+    .floatl--focused .floatl__label,
+    .floatl__label
+      color: $gold
+
+    .floatl--active .floatl__input
+      padding: 2em .55em .3em
+
+    .floatl__input
+      padding: 1.1em 1em .3em
+      width: 100%
+      border: 0
+      border-radius: 0
+      font-size: .45em
+
+  .form__contact__footer
+    margin-top: .4em
+
+    +respond-at($breakpoint-M)
+      text-align: right
+
+  .form__contact__description
+    font:
+      family: inherit
+      size: 1rem
+      weight: $weight-regular
+    color: lighten($black, 55%)
+
+  .form__contact__description__item
+    margin-top: .5rem
+    display: block
+    line-height: 1.5em
+
+    &::before
+      content: "*"
+      padding-right: .5em
+      color: $gold
+
+
+  .form__contact__submit__button
+    +reset-button-style()
+    display: inline-block
+    margin-top: 1rem
+    padding: 0
+    width: 100%
+    border-radius: 3px
+    height: 2.9rem
+    color: $white
+    background-color: $black
+    letter-spacing: .04rem
+    font:
+      size: 1.2rem
+      weight: $weight-regular
+
+    +respond-at($breakpoint-M)
+      display: inline-block
+      margin-right: 1rem
+      padding: .75rem 4rem
+      width: auto
+
+
+::-webkit-input-placeholder
+  color: inherit
+
+:-moz-placeholder
+  color: inherit
+  opacity:  1
+
+::-moz-placeholder
+  color: inherit
+  opacity:  1
+
+:-ms-input-placeholder
+  color: inherit
+
+::-ms-input-placeholder
+  color: inherit

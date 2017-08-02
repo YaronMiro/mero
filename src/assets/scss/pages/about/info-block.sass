@@ -1,0 +1,152 @@
+
+.info__block
+  margin-top: 3rem
+  padding: 0 10% 3rem
+  text-align: center
+  font-size: 1rem
+  line-height: 1.5rem
+  +shadow(bottom)
+
+
+  +respond-at($breakpoint-S)
+    margin-top: 4rem
+    padding-bottom: 4rem
+
+  +respond-at($breakpoint-M)
+    padding-right: 4rem
+    padding-left: 4rem
+
+  +respond-at($breakpoint-L)
+    margin: 0 7rem
+    padding: 6rem 6rem
+
+  .title
+    +title($font-anton)
+
+  .sub__title
+    margin: 0
+    color: $gold
+    font-weight: $weight-semi-bold
+
+    +respond-at(520px)
+      font-size: 1.2em
+
+    +respond-at($breakpoint-S)
+      line-height: 1.5em
+
+  .description
+    margin: 1rem 0 0
+    font-size: 1em
+
+    +respond-at($breakpoint-S)
+      font-size: 1.3em
+      line-height: 1.5em
+
+    +respond-at($breakpoint-L)
+      font-size: 1.25em
+
+
+  &.info__block--respect
+
+    .title
+      +respond-at($breakpoint-M)
+        margin: 0 4.5rem 4.5rem 0
+        text-align: left
+
+      +respond-at($breakpoint-L)
+        margin-top: 1.5rem
+
+    .respect__infograph
+      +respond-at($breakpoint-M)
+        padding-left: -3rem
+        width: 110%
+
+      +respond-at($breakpoint-M)
+        padding-left: 0
+        width: 100%
+
+
+  &.info__block--core
+    +respond-at($breakpoint-M)
+      display: flex
+      flex-direction: row
+      align-items: center
+      text-align: left
+
+    .title
+      text-transform: uppercase
+
+      +respond-at($breakpoint-M)
+        margin: 0 2rem 0 0
+        transform: rotate(-10deg)
+
+    .sub__title
+      display: block
+      margin-bottom: 1rem
+
+      +respond-at(520px)
+        font-size: 1.2em
+
+      +respond-at($breakpoint-S)
+        font-size: 1em
+        line-height: 1.5em
+
+      +respond-at($breakpoint-M)
+        margin: 0
+
+    .description
+      margin-top: 0
+
+      +respond-at($breakpoint-M)
+        margin: 0
+
+
+  &.info__block--design
+    +respond-at($breakpoint-M)
+      text-align: left
+
+    .title
+      +respond-at($breakpoint-S)
+        font-size: 4.2rem
+
+    .sub__title
+      +respond-at($breakpoint-M)
+        margin-left: 0
+
+
+  &.info__block--quality
+
+    .title
+      +respond-at($breakpoint-S)
+        font-size: 3.75rem
+
+      small
+        display: block
+        +respond-at($breakpoint-S)
+          display: inline-block
+          font-size: 2.45rem
+
+  &.info__block--clientele
+
+    +respond-at($breakpoint-M)
+      display: flex
+      flex-direction: row
+      align-items: center
+      text-align: left
+
+    .title
+      display: inline-block
+      padding: .5em .5em .2em
+      border: 2px solid $gold
+
+      +respond-at($breakpoint-S)
+        font-size: 3em
+
+      +respond-at($breakpoint-M)
+        display: block
+        margin-right: 1.5rem
+        font-size: 2.8rem
+
+    .description
+      +respond-at($breakpoint-M)
+        max-width: 42rem

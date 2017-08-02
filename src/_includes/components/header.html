@@ -1,0 +1,27 @@
+<header class="main__header">
+  <a class="logo" href="/">
+    <img class="logo__img" src="/images/optimized/svg/logo.svg" alt="Mero logo"/>
+  </a>
+  <div id="main-header-menu" class="main__header__menu">
+    <button class="main__header__menu__button">
+      <span class="button__text">menu</span>
+      <img class="button__icon" src="/images/optimized/svg/menu-icon.svg" alt="Menu icon"/>
+    </button>
+    <nav class="main__header__nav--full">
+      <ul class="main__header__menu__list">
+        {% include components/menu.html %}
+      </ul>
+    </nav>
+    <div id="main-header-nav-container">
+      <div class="outer-close main__header__menu__button">
+        <a class="close"><span></span></a>
+      </div>
+      <nav class="main__header__nav--narrow">
+        <ul class="main__header__menu__list">
+          {% include components/menu.html %}
+        </ul>
+      </nav>
+    </div>
+    <div class="shadow-divder"></div>
+  </div>
+</header>

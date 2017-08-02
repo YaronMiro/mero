@@ -1,0 +1,98 @@
+// Creates @media breakpoints
+=respond-at($media)
+  @media (min-width: $media)
+    @content
+
+=title($font-family)
+  margin: 0
+  font:
+    family: $font-family
+    weight: normal
+    size: 2.5em
+  line-height: 1.2em
+
+  +respond-at(520px)
+    font-size: 3em
+
+  +respond-at($breakpoint-S)
+    font-size: 4.5em
+
+
+// Copied from bootstrap
+=clearfix()
+  clear: both
+  *zoom: 1
+  &:before,
+  &:after
+    display: table
+    content: ""
+    line-height: 0
+
+  &:after
+    clear: both
+
+=reset-list-style()
+  list-style: none
+  margin: 0
+  padding: 0
+
+=reset-button-style()
+  padding-left: 0
+  padding-right: 0
+  background: transparent
+  border: 0
+  color: inherit
+
+  &:focus
+    outline: 0
+
+=divider($height,$color:$mist)
+  height: $height
+  width: 100%
+  background: $color
+
+=remove-shadow($position)
+  box-shadow: none
+  border-#{$position}: 0
+  &::after,
+  &::before
+    display: none
+
+=shadow($position, $border: null)
+  // Declare variable (default value)
+  $shadow: 0 0
+  $pesudo: after
+
+  @if $position == top
+    $shadow: 0 -2rem
+    $pesudo: before
+
+  @if $position == bottom
+    $shadow: 0 2rem
+
+  @if $position == left
+    $shadow: -2rem 0
+
+  @if $border == with-border
+    border-#{$position}: 1px solid rgba(217, 217, 217, .4)
+
+  box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
+
+  @if $position == bottom
+    +respond-at($breakpoint-S)
+      // Fix to hide shadow on the sides of the block
+      position: relative
+      &::after,
+      &::before
+        z-index: 1
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        right: -.75rem
+        width: .75rem
+        background: $white
+
+      &::before,
+        left: -.75rem
+        right: auto

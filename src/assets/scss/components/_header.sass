@@ -1,0 +1,264 @@
+.main__header
+  display: flex
+  flex-direction: column-reverse
+  text-align: center
+
+  +respond-at($breakpoint-L)
+    position: relative
+    z-index: 999
+    margin: 3rem 0 2rem
+    padding: 0 3rem 2rem
+    +shadow(bottom)
+    flex-direction: row
+    align-items: center
+
+
+.main__header__menu
+  padding: 8rem 0 1rem
+  margin-top: -6.5rem
+  // Sticky
+  z-index: 1
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  padding-bottom: 2rem
+  height: 11rem
+  background: $white
+
+
+  +respond-at($breakpoint-S)
+    margin-top: -5rem
+    padding-bottom: 1.5rem
+    // Non Sticky
+    position: static
+    top: auto
+    left: auto
+    right: auto
+    width: 100%
+    max-width: none
+    height: auto
+    margin-left: auto
+    margin-right: auto
+    z-index: inherit
+    background: transparent
+    border-bottom: 0
+
+  +respond-at($breakpoint-M)
+    padding-bottom: 1.75rem
+    // Non Sticky
+    width: auto
+
+  +respond-at($breakpoint-L)
+    margin-top: 1rem
+    margin-left: 4.3rem
+    padding: 0
+    +remove-shadow(bottom)
+
+
+&.open__main__header__menu
+  position: static
+
+.shadow-divder
+  z-index: -1
+  margin-top: -8rem
+  padding-top: 8.8rem
+  +shadow(bottom)
+
+  +respond-at($breakpoint-S)
+    margin-top: -7rem
+
+  +respond-at($breakpoint-M)
+    margin-top: -6.5rem
+
+  +respond-at($breakpoint-L)
+    +remove-shadow(bottom)
+    display: none
+
+
+
+.main__header__menu__button
+  +reset-button-style()
+  margin: 0 auto
+  padding: 0 12%
+  width: 100%
+  font-size: 2.7rem
+  height: 2rem
+
+  +respond-at($breakpoint-S)
+    font-size: 3.7rem
+
+  +respond-at($breakpoint-M)
+    display: none
+
+  .button__icon
+    float: right
+    width: .7em
+    height: 100%
+
+  .button__text
+    float: left
+    line-height: 2rem
+    font:
+      size: .7em
+      // weight: $weight-regular
+    text-transform: uppercase
+
+#main-header-nav-container
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: $white
+  opacity: 0
+  visibility: hidden
+  transition: all .25s ease
+  z-index: 1000
+
+  +respond-at($breakpoint-M)
+    display: none
+
+  &.open__mobile__navigation
+    opacity: 1
+    visibility: visible
+    padding: 0
+
+  .outer-close
+    position: absolute
+    right: 0
+    top: 0
+    width: 5rem
+    height: 5rem
+    cursor: pointer
+
+    .close
+      position: fixed
+      top: 2.5rem
+      right: 3.8rem
+      color: white
+      z-index: 3
+      cursor: pointer
+      font-family: sans-serif
+
+      span,
+      span:before,
+      span:after
+        border-radius: .3rem
+        height: .4rem
+        width: 2.2rem
+        background: $black
+        position: absolute
+        display: block
+        content: ""
+
+      span
+        background: transparent
+
+        &::before
+          transform: rotate(45deg)
+
+        &::after
+          transform: rotate(-45deg)
+
+  .main__header__nav--narrow
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 6rem auto 0
+    text-align: left
+
+    +respond-at(420px)
+      max-width: 60%
+
+    +respond-at($breakpoint-S)
+      text-align: center
+
+    .main__header__menu__list
+      +reset-list-style()
+      font:
+        size: 1rem
+        weight: $weight-regular
+      line-height: 1.5rem
+      border-top: 1px solid $gray-lighter
+
+      +respond-at($breakpoint-S)
+        font-size: 1.5rem
+
+      .menu__list__item
+        display: block
+        text-transform: uppercase
+
+        &.menu__list__item--active
+
+          .menu__item__link
+            opacity: 1
+
+        .menu__item__link
+          position: relative
+          display: block
+          color: inherit
+          text-decoration: none
+          padding: 10% 5%
+          cursor: pointer
+          border-bottom: 1px solid $gray-lighter
+          transition: all .15s ease
+          opacity: .4
+
+          &:hover
+            opacity: 1
+
+
+.main__header__nav--full
+  display: none
+
+  +respond-at($breakpoint-M)
+    display: block
+
+  .main__header__menu__list
+    +reset-list-style()
+    font:
+      size: 1.1rem
+      weight: $weight-regular
+
+  .menu__list__item
+    display: inline-block
+    text-transform: uppercase
+
+    &+.menu__list__item
+      margin-left: 1.85rem
+
+    &.menu__list__item--active
+
+      .menu__item__link
+        opacity: 1
+
+    .menu__item__link
+      display: block
+      color: inherit
+      text-decoration: none
+      cursor: pointer
+      transition: all .15s ease
+      opacity: .4
+
+      &:hover
+        opacity: 1
+
+.logo
+  display: block
+  margin: 7rem auto 0
+  max-width: 55%
+
+  +respond-at($breakpoint-S)
+    margin-top: 3rem
+
+  +respond-at($breakpoint-M)
+    max-width: 40%
+
+  +respond-at($breakpoint-L)
+    max-width: 14rem
+    margin: 0 0 0 11rem
+
+  .logo__img
+    max-width: 100%
+    height: auto
