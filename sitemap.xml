@@ -6,6 +6,10 @@
      </url>
   
     <url>
+      <loc>http://localhost:3000/about/</loc>
+     </url>
+  
+    <url>
       <loc>http://localhost:3000/</loc>
      </url>
   
