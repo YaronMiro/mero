@@ -1,0 +1,181 @@
+
+.interior__architecture__page
+
+  .content
+    margin-top: 2.5rem
+    font-size: 1.2rem
+
+    +respond-at($breakpoint-S)
+      margin-top: 4rem
+
+    +respond-at($breakpoint-M)
+      display: flex
+      flex-direction: column
+
+    +respond-at($breakpoint-L)
+      margin-top: 0
+      padding: 1.8rem 0 3rem
+      flex-direction: row-reverse
+      align-items: center
+
+
+  .coming__soon__title
+    +respond-at($breakpoint-S)
+      font-size: 1.75rem
+
+    +respond-at($breakpoint-M)
+      font-size: 1.4rem
+
+    .strong
+      +respond-at($breakpoint-S)
+        font-size: 2.25rem
+
+      +respond-at($breakpoint-M)
+        font-size: 1.9rem
+
+  .divider__left
+    display: none
+    +respond-at($breakpoint-L)
+      display: block
+      width: 14rem
+      height: 47rem
+      +shadow(left)
+      margin-right: -6rem
+
+
+  .first
+    +respond-at($breakpoint-L)
+
+    .coming__soon__title
+      display: none
+      +respond-at($breakpoint-L)
+        display: block
+        margin: 10rem 0 0
+        padding: 0 .5rem
+
+    .divider__bottom
+      display: none
+
+      +respond-at($breakpoint-M)
+        display: block
+
+      +respond-at($breakpoint-L)
+        display: none
+
+  .last
+    +respond-at($breakpoint-L)
+      margin-right: -2rem
+
+  .divider__bottom
+    margin-top: -11.75rem
+    margin-bottom: 1.5rem
+    height: 13rem
+    +shadow(bottom)
+
+  .hero__text
+    padding: 0 17%
+    border-radius: 5px
+
+    +respond-at($breakpoint-M)
+      text-align: center
+
+    +respond-at($breakpoint-L)
+      padding: 0
+
+    .title
+      margin-bottom: 0
+      font-size: 2.5rem
+
+      +respond-at($breakpoint-S)
+        font-size: 4rem
+
+      +respond-at($breakpoint-M)
+        font-size: 3.5rem
+
+      +respond-at($breakpoint-L)
+        font-size: 3rem
+
+    .description
+      margin-top: 0
+      line-height: 1.5rem
+
+      +respond-at($breakpoint-S)
+        font-size: 1.5rem
+        line-height: 2rem
+
+      +respond-at($breakpoint-M)
+        margin-right: auto
+        margin-left: auto
+        max-width: 27rem
+
+  .items__container
+    width: 100%
+
+    +respond-at($breakpoint-M)
+      text-align: center
+
+    .img__wrapper
+      text-align: center
+
+      +respond-at($breakpoint-M)
+        display: inline-block
+
+
+      &:first-child,
+      &:last-child
+        display: none
+        +respond-at($breakpoint-L)
+          display: inline-block
+
+      .divider__bottom
+        +respond-at($breakpoint-M)
+          display: none
+
+      &:nth-child(4)
+        +respond-at($breakpoint-M)
+          display: block
+
+        .divider__bottom
+          +respond-at($breakpoint-M)
+            display: block
+
+        +respond-at($breakpoint-L)
+          display: none
+
+      &:nth-child(3),
+      &:nth-child(6)
+        +respond-at($breakpoint-M)
+          margin-left: 1.25rem
+
+      &:nth-child(2),
+      &:nth-child(7)
+        +respond-at($breakpoint-L)
+          margin-left: 1.25rem
+
+      &:nth-child(n+5)
+        +respond-at($breakpoint-L)
+          margin-top: 1.25rem
+
+
+      .item__img
+        height: auto
+        max-width: 100%
+        filter: grayscale(15%)
+
+        +respond-at($breakpoint-M)
+          padding: 0
+          max-width: none
+
+        &.item__img--small
+          width: 45%
+
+          +respond-at($breakpoint-M)
+            width: 14.5rem
+            height: 20rem
+
+        &.item__img--large
+          width: 75%
+
+          +respond-at($breakpoint-M)
+            width: 28.5rem
+            height: 20rem

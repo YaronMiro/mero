@@ -58,41 +58,48 @@
   &::before
     display: none
 
-=shadow($position, $border: null)
+=shadow($position)
   // Declare variable (default value)
   $shadow: 0 0
   $pesudo: after
-
-  @if $position == top
-    $shadow: 0 -2rem
-    $pesudo: before
-
-  @if $position == bottom
-    $shadow: 0 2rem
+  // bottom
+  $shadow: 0 2rem
 
   @if $position == left
     $shadow: -2rem 0
 
-  @if $border == with-border
-    border-#{$position}: 1px solid rgba(217, 217, 217, .4)
-
   box-shadow: #{$shadow} 4rem -3rem rgba(0, 0, 0, 0.25)
 
-  @if $position == bottom
-    +respond-at($breakpoint-S)
-      // Fix to hide shadow on the sides of the block
-      position: relative
+  +respond-at($breakpoint-S)
+    // Fix to hide shadow on the sides of the block
+    position: relative
+    &::after,
+    &::before
+      z-index: 1
+      content: ""
+      position: absolute
+      background: $white
+
+    @if $position == bottom
       &::after,
       &::before
-        z-index: 1
-        content: ""
-        position: absolute
         top: 0
         bottom: 0
         right: -.75rem
         width: .75rem
-        background: $white
 
       &::before,
-        left: -.75rem
         right: auto
+        left: -.75rem
+
+    @if $position == left
+      &::after,
+      &::before
+        bottom: -.75rem
+        left: 0
+        right: 0
+        height: .75rem
+
+      &::before,
+        bottom: auto
+        top: -.75rem

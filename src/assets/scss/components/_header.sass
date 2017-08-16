@@ -6,7 +6,7 @@
   +respond-at($breakpoint-L)
     position: relative
     z-index: 999
-    margin: 3rem 0 2rem
+    margin: 3rem 0 0
     padding: 0 3rem 2rem
     +shadow(bottom)
     flex-direction: row
@@ -46,13 +46,13 @@
 
   +respond-at($breakpoint-M)
     padding-bottom: 1.75rem
-    // Non Sticky
-    width: auto
 
   +respond-at($breakpoint-L)
     margin-top: 1rem
     margin-left: 4.3rem
     padding: 0
+    // Non Sticky
+    width: auto
     +remove-shadow(bottom)
 
 
@@ -246,14 +246,14 @@
 
 .logo
   display: block
-  margin: 7rem auto 0
-  max-width: 55%
+  margin: 6.25rem 17.5% 0
 
   +respond-at($breakpoint-S)
     margin-top: 3rem
 
   +respond-at($breakpoint-M)
-    max-width: 40%
+    margin-left: 30%
+    margin-right: 30%
 
   +respond-at($breakpoint-L)
     max-width: 14rem
