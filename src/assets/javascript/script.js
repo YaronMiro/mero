@@ -39,26 +39,6 @@ function initFloatLabel(className) {
 }
 
 /**
- * Init the mobile navigation menu button.
- *
- */
-function toggleNavigationDisplay() {
-  $('.main__header__menu__button').click(function() {
-    $('#main-header-nav-container').toggleClass('open__mobile__navigation');
-    $('#main-header-menu').toggleClass('open__main__header__menu');
-    $('.container__main__content').toggleClass('open__menu__hide__all');
-    $('#main_footer').toggleClass('open__menu__hide__all');
-    });
-  $('#main-header-nav-container .menu__item__link').click(function() {
-    $('#main-header-nav-container').toggleClass('open__mobile__navigation');
-    $('#main-header-menu').toggleClass('open__main__header__menu');
-    $('.container__main__content').toggleClass('open__menu__hide__all');
-    $('#main_footer').toggleClass('open__menu__hide__all');
-    });
-}
-
-
-/**
  * Init the Scroll Animsition effect (https://github.com/michalsnik/aos).
  *
  */
@@ -95,6 +75,19 @@ function pageLoadAnimateEffect() {
   });
 }
 
+/**
+ * Menu push & slide.
+ *
+ */
+function toggleNavigation() {
+  $('#menu-button').click(function(){
+    $('#menu-icon').toggleClass('open');
+    $('#menu-narrow').toggleClass('menu__small__open');
+    $('.container__main__content, #main__footer, .logo')
+      .toggleClass('open__menu__hide__all');
+  });
+}
+
 
 /**
  * Init the header scroll and fixed position (http://callmenick.com/post/animated-resizing-header-on-scroll).
@@ -120,6 +113,6 @@ function initScrollHeader(shrinkHeight) {
 $(document).ready(function() {
   pageLoadAnimateEffect();
   testBrowser();
-  toggleNavigationDisplay();
   initFloatLabel('floatl__js');
+  toggleNavigation();
 });

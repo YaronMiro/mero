@@ -98,31 +98,11 @@
 
   .button__text
     float: left
-    line-height: 2rem
+    line-height: 1.4rem
     font:
       size: .7em
-      // weight: $weight-regular
     text-transform: uppercase
 
-#main-header-nav-container
-  position: absolute
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  background: $white
-  opacity: 0
-  visibility: hidden
-  transition: all .25s ease
-  z-index: 1000
-
-  +respond-at($breakpoint-M)
-    display: none
-
-  &.open__mobile__navigation
-    opacity: 1
-    visibility: visible
-    padding: 0
 
   .outer-close
     position: absolute
@@ -161,26 +141,27 @@
         &::after
           transform: rotate(-45deg)
 
+#main-header-nav-container
+  +respond-at($breakpoint-M)
+    display: none
+
   .main__header__nav--narrow
     display: flex
     flex-direction: column
     justify-content: center
-    margin: 6rem auto 0
     text-align: left
+    // background: $white
+    // background: red
 
-    +respond-at(420px)
-      max-width: 60%
 
     +respond-at($breakpoint-S)
-      text-align: center
 
     .main__header__menu__list
       +reset-list-style()
       font:
         size: 1rem
         weight: $weight-regular
-      line-height: 1.5rem
-      border-top: 1px solid $gray-lighter
+      line-height: 1.5remF
 
       +respond-at($breakpoint-S)
         font-size: 1.5rem
@@ -188,6 +169,9 @@
       .menu__list__item
         display: block
         text-transform: uppercase
+
+        &:last-child .menu__item__link
+          border-bottom: 0
 
         &.menu__list__item--active
 
@@ -199,11 +183,12 @@
           display: block
           color: inherit
           text-decoration: none
-          padding: 10% 5%
+          padding: 5% 0
           cursor: pointer
           border-bottom: 1px solid $gray-lighter
           transition: all .15s ease
           opacity: .4
+          padding: 10% 5%
 
           &:hover
             opacity: 1
@@ -262,3 +247,69 @@
   .logo__img
     max-width: 100%
     height: auto
+
+.menu__small
+  visibility: hidden
+  padding: 0 12%
+  max-height: 0
+  overflow: hidden
+  transition: opacity .45s ease-in-out
+  opacity: 0
+
+
+  &.menu__small__open
+    visibility: visible
+    margin-top: 5rem
+    max-height: 40rem
+    opacity: 1
+
+    +respond-at($breakpoint-S)
+      margin-top: 0
+
+.menu__icon__wrapper
+  float: right
+  width: 2rem
+  height: 100%
+  position: relative
+  transform: rotate(0deg)
+  transition: .25s ease-in-out
+
+  .menu__icon__child
+    display: block
+    position: absolute
+    height: .25rem
+    width: 100%
+    background: $black
+    border-radius: .3rem
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+
+    &:nth-child(1)
+      top: 0px
+
+    &:nth-child(2),
+    &:nth-child(3)
+      top: .55rem
+
+
+    &:nth-child(4)
+      top: 1.1rem
+
+&.open .menu__icon__child
+  &:nth-child(1)
+    top: .55rem
+    width: 0%
+    left: 50%
+
+  &:nth-child(2)
+    transform: rotate(45deg)
+
+  &:nth-child(3)
+    transform: rotate(-45deg)
+
+  &:nth-child(4)
+    top: .55rem
+    width: 0%
+    left: 50%
