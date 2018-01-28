@@ -6,8 +6,11 @@
 
   .shadow__divider
     padding: 8rem 7% 1rem
-    margin-top: -10.5rem
+    margin-top: -7.8rem
     +shadow(bottom)
+
+    +respond-at($breakpoint-L)
+      margin-top: -10.5rem
 
   .main__footer__list
     +reset-list-style()
