@@ -1,0 +1,148 @@
+.furniture__page
+
+  .content
+    +respond-at($breakpoint-M)
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      justify-content: center
+      margin: 2rem 0 0
+
+    +respond-at($breakpoint-L)
+      margin: 5.5rem 0 5.5rem
+
+    .first
+      +respond-at($breakpoint-M)
+        margin-left: -4rem
+
+    .last
+
+  .title
+    margin: 2rem 0 0
+    text-align: center
+    font-size: 3.5rem
+
+    +respond-at(370px)
+      margin-top: 3rem
+      font-size: 4rem
+      line-height: 4rem
+
+    +respond-at(450px)
+      font-size: 5rem
+      line-height: 5rem
+
+    +respond-at(550px)
+      margin-top: 4rem
+      font-size: 5.8rem
+      line-height: 5.8rem
+
+    +respond-at($breakpoint-M)
+      margin-top: 0
+      font-size: 3.5rem
+
+    +respond-at($breakpoint-L)
+      font-size: 5rem
+
+  .shadow__divder
+    +shadow(bottom)
+
+    +respond-at($breakpoint-M)
+      +remove-shadow(bottom)
+      +shadow(left)
+      z-index: 3
+      margin-left: 4rem
+      padding-left: 8.8rem
+      height: 29rem
+
+    +respond-at($breakpoint-L)
+      height: 40rem
+
+  .preview__images__text
+    display: none
+
+    +respond-at($breakpoint-M)
+      display: block
+      margin: 1rem 0 0 3.5rem
+    
+    +respond-at($breakpoint-L)
+      margin: 2rem 0 0 2.5rem
+
+    .preview__images__text__item
+      margin: 0
+      font-size: 2rem
+      font-weight: $weight-light
+      text:
+        align: center
+        transform: uppercase
+
+      +respond-at($breakpoint-L)
+        font-size: 2.5rem
+
+  .coming__soon__title
+    margin: 2rem 0 .85rem
+    font-size: .8rem
+
+    +respond-at(370px)
+      font-size: 1rem
+
+    +respond-at($breakpoint-M)
+      margin-top: -.8rem
+      padding: 0
+
+    &.coming__soon__title--top
+      display: none
+      +respond-at($breakpoint-M)
+        display: block
+
+    &.coming__soon__title--bottom
+      display: block
+      margin-top: 3rem
+      +respond-at($breakpoint-M)
+        display: none
+
+
+  .preview__images
+    display: none
+
+    +respond-at($breakpoint-M)
+      display: block
+
+    .preview__img
+      height: 27rem
+      max-width: 100%
+      
+      +respond-at($breakpoint-L)
+        height: 38rem
+
+
+  .preview__images__list
+    +reset-list-style()
+    margin-top: 2rem
+    text-align: center
+
+    +respond-at($breakpoint-M)
+      display: none
+
+    .preview__image__item
+      margin-bottom: 1.5rem
+      padding-bottom: 2rem
+      +shadow(bottom)
+
+      &:last-child
+        +remove-shadow(bottom)
+        margin-bottom: 0
+        padding-bottom: 0
+
+      .preview__image__item__img
+        max-width: 75%
+
+      .preview__image__item__text
+        margin: 1rem 0 0
+        font-size: 2rem
+        font-weight: $weight-light
+        text:
+          align: center
+          transform: uppercase
+
+        +respond-at(370px)
+          font-size: 2.25rem

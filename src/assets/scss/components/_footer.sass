@@ -1,10 +1,13 @@
 #main__footer
   margin-bottom: 1rem
+  +fade-in-animation()
+
 
   +respond-at($breakpoint-M)
     text-align: center
 
   .shadow__divider
+    z-index: -1
     padding: 8rem 7% 1rem
     margin-top: -7.8rem
     +shadow(bottom)
@@ -24,14 +27,12 @@
 
     +respond-at($breakpoint-M)
       display: inline-block
-      margin-top: 4rem
-      padding: 0 15%
-
-
-    +respond-at($breakpoint-M)
-      display: inline-block
       margin-top: 2rem
       padding: 0
+      width: 90%
+
+    +respond-at($breakpoint-L)
+      width: auto
 
 
     .main__footer__list__item
@@ -39,9 +40,12 @@
       border-bottom: 1px solid rgba($gray-lighter, 0.4)
       font-size: 1rem
 
-      &:last-child,
-      &:nth-last-child(2)
+      &:last-child
         border-bottom: 0
+
+      &:nth-last-child(2)
+        +respond-at($breakpoint-S)
+          border-bottom: 0
 
       +respond-at($breakpoint-S)
         display: inline-block

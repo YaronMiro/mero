@@ -110,9 +110,23 @@ function initScrollHeader(shrinkHeight) {
   });
 }
 
+/** 
+ * Adding the jquery cycle plug-in.
+ * 
+*/
+function cycleSlideShow() {
+  $('.slideshow').cycle(
+    { fx: 'fade',
+     speed: 1000,
+     timeout: 7000
+    } 
+  );
+};
+
 $(document).ready(function() {
   pageLoadAnimateEffect();
   testBrowser();
   initFloatLabel('floatl__js');
   toggleNavigation();
+  cycleSlideShow();
 });

@@ -3,15 +3,18 @@
   flex-direction: column-reverse
   text-align: center
 
-  +respond-at($breakpoint-L)
+  +respond-at($breakpoint-M)
     position: relative
     z-index: 999
-    margin: 3rem 0 0
-    padding: 0 3rem 2rem
+    margin: 1.4rem 0 0
+    padding: 0 3rem 1rem
     +shadow(bottom)
     flex-direction: row
     align-items: center
 
+  +respond-at($breakpoint-L)
+    margin-top: 3rem
+    padding-bottom: 2rem
 
 .main__header__menu
   padding: 8rem 0 1rem
@@ -56,30 +59,22 @@
     +remove-shadow(bottom)
 
 
-&.open__main__header__menu
-  position: static
+  .shadow__divder
+    z-index: -1
+    margin-top: -8rem
+    padding-top: 8.8rem
+    +shadow(bottom)
 
-.shadow-divder
-  z-index: -1
-  margin-top: -8rem
-  padding-top: 8.8rem
-  +shadow(bottom)
+    +respond-at($breakpoint-S)
+      margin-top: -7.8rem
 
-  +respond-at($breakpoint-S)
-    margin-top: -7rem
-
-  +respond-at($breakpoint-M)
-    margin-top: -6.5rem
-
-  +respond-at($breakpoint-L)
-    +remove-shadow(bottom)
-    display: none
-
+    +respond-at($breakpoint-M)
+      +remove-shadow(bottom)
 
 
 .main__header__menu__button
   +reset-button-style()
-  margin: 0 auto
+  margin: 0 auto 0
   padding: 0 12%
   width: 100%
   font-size: 2.7rem
@@ -91,55 +86,62 @@
   +respond-at($breakpoint-M)
     display: none
 
-  .button__icon
-    float: right
-    width: .7em
-    height: 100%
-
   .button__text
     float: left
-    line-height: 1.4rem
-    font:
-      size: .7em
+    line-height: 2rem
+    font-size: .78em
     text-transform: uppercase
 
+    +respond-at($breakpoint-S)
+      font-size: .6em
 
-  .outer-close
-    position: absolute
-    right: 0
-    top: 0
-    width: 5rem
-    height: 5rem
-    cursor: pointer
+  .menu__icon__wrapper
+    float: right
+    width: 2rem
+    height: inherit
+    position: relative
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
 
-    .close
-      position: fixed
-      top: 2.5rem
-      right: 3.8rem
-      color: white
-      z-index: 3
-      cursor: pointer
-      font-family: sans-serif
+    .menu__icon__child
+      display: block
+      position: absolute
+      height: 2px
+      width: 100%
+      background: $black
+      border-radius: 2px
+      opacity: 1
+      left: 0
+      transform: rotate(0deg)
+      transition: .25s ease-in-out
 
-      span,
-      span:before,
-      span:after
-        border-radius: .3rem
-        height: .4rem
-        width: 2.2rem
-        background: $black
-        position: absolute
-        display: block
-        content: ""
+      &:nth-child(1)
+        top: 4px
 
-      span
-        background: transparent
+      &:nth-child(2),
+      &:nth-child(3)
+        top: 14px
 
-        &::before
-          transform: rotate(45deg)
+      &:nth-child(4)
+        bottom: 6px
 
-        &::after
-          transform: rotate(-45deg)
+    &.open .menu__icon__child
+      &:nth-child(1)
+        top: 6px
+        width: 0%
+        left: 50%
+
+      &:nth-child(2)
+        transform: rotate(45deg)
+
+      &:nth-child(3)
+        transform: rotate(-45deg)
+
+      &:nth-child(4)
+        top: .55rem
+        width: 0%
+        left: 50%
+
 
 #main-header-nav-container
   +respond-at($breakpoint-M)
@@ -150,11 +152,6 @@
     flex-direction: column
     justify-content: center
     text-align: left
-    // background: $white
-    // background: red
-
-
-    +respond-at($breakpoint-S)
 
     .main__header__menu__list
       +reset-list-style()
@@ -230,18 +227,18 @@
         opacity: 1
 
 .logo
-  display: block
-  margin: 6.25rem 17.5% 0
+  margin: 6.5rem 17.5% 0
+  +fade-in-animation()
 
   +respond-at($breakpoint-S)
     margin-top: 3rem
 
   +respond-at($breakpoint-M)
-    margin-left: 30%
-    margin-right: 30%
+    display: block
+    max-width: 15rem
+    margin: 0 0 0 3.5rem
 
   +respond-at($breakpoint-L)
-    max-width: 14rem
     margin: 0 0 0 11rem
 
   .logo__img
@@ -251,7 +248,7 @@
 .menu__small
   visibility: hidden
   padding: 0 12%
-  max-height: 0
+  height: 0
   overflow: hidden
   transition: opacity .45s ease-in-out
   opacity: 0
@@ -259,57 +256,10 @@
 
   &.menu__small__open
     visibility: visible
+    overflow: visible
     margin-top: 5rem
-    max-height: 40rem
+    height: 100%
     opacity: 1
 
     +respond-at($breakpoint-S)
       margin-top: 0
-
-.menu__icon__wrapper
-  float: right
-  width: 2rem
-  height: 100%
-  position: relative
-  transform: rotate(0deg)
-  transition: .25s ease-in-out
-
-  .menu__icon__child
-    display: block
-    position: absolute
-    height: .25rem
-    width: 100%
-    background: $black
-    border-radius: .3rem
-    opacity: 1
-    left: 0
-    transform: rotate(0deg)
-    transition: .25s ease-in-out
-
-    &:nth-child(1)
-      top: 0px
-
-    &:nth-child(2),
-    &:nth-child(3)
-      top: .55rem
-
-
-    &:nth-child(4)
-      top: 1.1rem
-
-&.open .menu__icon__child
-  &:nth-child(1)
-    top: .55rem
-    width: 0%
-    left: 50%
-
-  &:nth-child(2)
-    transform: rotate(45deg)
-
-  &:nth-child(3)
-    transform: rotate(-45deg)
-
-  &:nth-child(4)
-    top: .55rem
-    width: 0%
-    left: 50%

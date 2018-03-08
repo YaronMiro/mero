@@ -50,18 +50,20 @@
 
     .title
       +respond-at($breakpoint-M)
-        margin: 0 4.5rem 4.5rem 0
+        margin: 0 4.5rem 2.5rem 8.5rem
         text-align: left
 
       +respond-at($breakpoint-L)
+        margin-left: 0
         margin-top: 1.5rem
+        margin-bottom: 4.5rem
 
     .respect__infograph
       +respond-at($breakpoint-M)
-        padding-left: -3rem
-        width: 110%
+        padding-left: 3rem
+        width: 95%
 
-      +respond-at($breakpoint-M)
+      +respond-at($breakpoint-L)
         padding-left: 0
         width: 100%
 
@@ -72,6 +74,12 @@
       flex-direction: row
       align-items: center
       text-align: left
+      padding-right: 5rem
+      padding-left: 5rem
+
+    +respond-at($breakpoint-L)
+      padding-right: 4rem
+      padding-left: 4rem
 
     .title
       text-transform: uppercase
@@ -103,7 +111,13 @@
 
   &.info__block--design
     +respond-at($breakpoint-M)
+      padding-right: 11rem
+      padding-left: 9rem
       text-align: left
+
+    +respond-at($breakpoint-L)
+      padding-right: 4rem
+      padding-left: 4rem
 
     .title
       +respond-at($breakpoint-S)
@@ -115,6 +129,14 @@
 
 
   &.info__block--quality
+    +respond-at($breakpoint-M)
+      padding-left: 8.5rem
+      padding-right: 8.5rem
+
+    +respond-at($breakpoint-L)
+      padding-left: 4rem
+      padding-right: 4rem
+
 
     .title
       +respond-at($breakpoint-S)
@@ -133,6 +155,13 @@
       flex-direction: row
       align-items: center
       text-align: left
+      padding-right: 5rem
+      padding-left: 9rem
+
+
+    +respond-at($breakpoint-L)
+      padding-right: 4rem
+      padding-left: 4rem
 
     .title
       display: inline-block

@@ -1,0 +1,56 @@
+.thank__you__page
+  .content
+    margin: 3rem auto
+    max-width: 70%
+    border-radius: .25rem
+    font-size: 1rem
+    text-align: center
+
+    +respond-at($breakpoint-M)
+      margin-top: 4rem
+      max-width: 60%
+
+    +respond-at($breakpoint-L)
+      padding-top: 15%
+      padding-bottom: 15%
+
+  .description
+    line-height: 1.5rem
+
+    +respond-at($breakpoint-S)
+      font-size: 1.35rem
+      line-height: 2rem
+
+    +respond-at($breakpoint-M)
+      margin-right: auto
+      margin-left: auto
+      max-width: 80%
+
+  .link
+    display: inline-block
+    margin-top: .5rem
+    padding: 1rem
+    min-width: 14.5rem
+    border-radius: 3px
+    color: $white
+    background-color: $black
+    text-decoration: none
+    letter-spacing: .04rem
+    text-transform: uppercase
+    font:
+      size: 1.2rem
+      weight: $weight-regular
+    transition:
+      property: background
+      duration: .4s
+      timing-function: ease
+
+    &:hover
+      background: rgba($black, .7)
+
+
+    +respond-at($breakpoint-S)
+      margin-top: 1rem
+
+    +respond-at($breakpoint-L)
+      margin-bottom: 2rem

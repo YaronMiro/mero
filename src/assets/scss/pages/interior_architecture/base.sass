@@ -20,18 +20,15 @@
 
 
   .coming__soon__title
+    margin: 1.75rem 0 .4rem
+    font-size: .9rem
+
     +respond-at($breakpoint-S)
-      font-size: 1.75rem
+      margin-bottom: 1rem
+      font-size: 1rem
 
-    +respond-at($breakpoint-M)
-      font-size: 1.4rem
-
-    .strong
-      +respond-at($breakpoint-S)
-        font-size: 2.25rem
-
-      +respond-at($breakpoint-M)
-        font-size: 1.9rem
+    +respond-at($breakpoint-L)
+      display: none
 
   .divider__left
     display: none
@@ -44,23 +41,14 @@
 
 
   .first
-    +respond-at($breakpoint-L)
 
     .coming__soon__title
       display: none
+
       +respond-at($breakpoint-L)
         display: block
         margin: 10rem 0 0
         padding: 0 .5rem
-
-    .divider__bottom
-      display: none
-
-      +respond-at($breakpoint-M)
-        display: block
-
-      +respond-at($breakpoint-L)
-        display: none
 
   .last
     +respond-at($breakpoint-L)
@@ -91,6 +79,7 @@
 
       +respond-at($breakpoint-M)
         font-size: 3.5rem
+        line-height: 3rem
 
       +respond-at($breakpoint-L)
         font-size: 3rem
@@ -106,13 +95,19 @@
       +respond-at($breakpoint-M)
         margin-right: auto
         margin-left: auto
+
+      +respond-at($breakpoint-L)
         max-width: 27rem
 
   .items__container
     width: 100%
 
     +respond-at($breakpoint-M)
+      margin-top: .25rem
       text-align: center
+
+    +respond-at($breakpoint-L)
+      margin-top: 0
 
     .img__wrapper
       text-align: center
@@ -133,11 +128,8 @@
 
       &:nth-child(4)
         +respond-at($breakpoint-M)
+          margin-top: 1.35rem
           display: block
-
-        .divider__bottom
-          +respond-at($breakpoint-M)
-            display: block
 
         +respond-at($breakpoint-L)
           display: none
