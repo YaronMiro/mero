@@ -2,19 +2,31 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>http://localhost:3000/interior-architecture/</loc>
+      <loc>http://www.mero.design/404.html</loc>
      </url>
   
     <url>
-      <loc>http://localhost:3000/about/</loc>
+      <loc>http://www.mero.design/furniture/</loc>
      </url>
   
     <url>
-      <loc>http://localhost:3000/</loc>
+      <loc>http://www.mero.design/about/</loc>
      </url>
   
     <url>
-      <loc>http://localhost:3000/sitemap.xml</loc>
+      <loc>http://www.mero.design/contact/thank-you/</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.mero.design/interior-architecture/</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.mero.design/</loc>
+     </url>
+  
+    <url>
+      <loc>http://www.mero.design/sitemap.xml</loc>
      </url>
   
 </urlset>
