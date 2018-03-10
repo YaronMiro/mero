@@ -1,14 +1,8 @@
 {
   "name": "mero",
   "description": "Mero website.",
-  "dependencies": {
-    "jquery-cycle2": "^2.1.6"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "jquery": "^3.2.1",
-    "floatl": "^1.0.5",
-    "aos": "^2.1.1",
-    "normalize-css": "^7.0.0",
-    "animsition": "^4.0.2"
+    "floatl": "^1.0.5"
   }
 }
