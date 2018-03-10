@@ -353,7 +353,7 @@ textarea {
 
 body {
   font-weight: 300;
-  font-family: "open sans", Arial, Verdana, sans-serif;
+  font-family: "Open Sans", sans-serif, Arial, Verdana, sans-serif;
   letter-spacing: .015rem; }
 
 html {
@@ -365,7 +365,7 @@ body {
 
 .title {
   margin: 0;
-  font-family: "anton";
+  font-family: "Anton", sans-serif;
   font-weight: normal;
   font-size: 2.5em;
   line-height: 1.2em; }
@@ -878,7 +878,7 @@ body {
       max-width: 58rem; } }
   .contact__us .contact__us__title {
     margin: 0;
-    font-family: "anton";
+    font-family: "Anton", sans-serif;
     font-weight: normal;
     font-size: 2.5em;
     line-height: 1.2em; }
@@ -1458,7 +1458,7 @@ body {
       padding: 6rem 6rem; } }
   .info__block .title {
     margin: 0;
-    font-family: "anton";
+    font-family: "Anton", sans-serif;
     font-weight: normal;
     font-size: 2.5em;
     line-height: 1.2em; }
@@ -1938,7 +1938,7 @@ body {
       font-size: 1rem; } }
   @media (min-width: 1250px) {
     .furniture__page .coming__soon__title {
-      margin-top: -.8rem;
+      margin-top: 0;
       padding: 0; } }
   .furniture__page .coming__soon__title.coming__soon__title--top {
     display: none; }
